@@ -1,7 +1,7 @@
 {
-    "name": "Micheal Weaver",
-    "logo_name": "micheal-weaver",
-    "role": "Front-end developer",
+    "name": "Yusuf Taiwo",
+    "logo_name": "yusuf-taiwo",
+    "role": "Creative Director",
     "about": {
         "sections": {
             "professional-info": {
@@ -10,15 +10,15 @@
                 "info": {
                     "experience": {
                         "title": "experience",
-                        "description": "<br>Over the past 5 years, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br><br> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+                        "description": "<br>I work as a Creative Director, Notion Partner, and Automation Lead, helping teams turn ideas into scalable systems that actually ship and sustain. My work sits at the intersection of product design, operations, and automation — translating vision into clear execution.<br><br>I’ve worked with 100+ businesses across startups, NGOs, and growing teams, designing internal tools, workflows, and knowledge systems that reduce friction and improve decision-making. I previously served as Project Manager for PumpFiat.com, leading cross-functional coordination and delivery from concept through launch, while aligning product, design, and operational execution."
                     },
                     "hard-skills": {
                         "title": "hard-skills",
-                        "description": "<br>As a front-end developer, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br><br> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+                        "description": "<br>Product strategy, project management, system architecture, and automation design. I specialize in Notion-based operating systems, no-code tools, and workflow automation that help teams centralize knowledge, improve accountability, and scale without unnecessary complexity.<br><br>I frequently collaborate with designers, developers, and stakeholders, turning abstract business needs into structured systems, clear documentation, and maintainable processes."
                     },
                     "soft-skills": {
                         "title": "soft-skills",
-                        "description": "<br>I bring more than Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br><br> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+                        "description": "<br>I bring a calm, structured leadership style to complex projects. I’m known for clear communication, thoughtful documentation, and the ability to align diverse teams around shared outcomes. I’m comfortable owning delivery, navigating ambiguity, and balancing speed with long-term quality."
                     }
                 }
             },
@@ -28,18 +28,18 @@
                 "info": { 
                     "bio": {
                         "title": "bio",
-                        "description": "<br> About me <br> I have 5 years of experience in web development lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br><br> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat  nulla pariatur. Excepteur sint occaecat  officia deserunt mollit anim id est laborum."
+                        "description": "<br>I’m a Creative Director and official Notion Partner, actively contributing to the Notion ecosystem as a Community Ambassador. I help organizations design human-friendly systems that support clarity, collaboration, and long-term growth.<br><br>My work is driven by a belief that good systems should disappear into the background — empowering people to focus on meaningful work instead of fighting tools and processes."
                     },
                     "interests": {
                         "title": "interests",
-                        "description": "<br>I am constantly learning and lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+                        "description": "<br>I’m interested in systems thinking, automation, product design, and the future of work. I enjoy exploring how structure, incentives, and tooling shape team behavior, culture, and scalability over time."
                     },
                     "education": {
                         "title": "education",
-                        "description": "<br>I have always been passionate about lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br><br> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+                        "description": "<br>My education combines formal training with extensive real-world experience. I studied at the University of Lagos, where I developed strong analytical and technical foundations, while continuing to learn through hands-on projects, partnerships, and professional practice.<br><br>This blend of academic grounding and practical execution shapes how I approach problem-solving, systems design, and leadership.",
                         "files": {
-                            "high-school": "I have been in 'Las viñas'...",
-                            "university": "The university..."
+                            "high-school": "Early foundations in technology, analysis, and problem-solving.",
+                            "university": "University of Lagos — continuous learning through applied projects, research, and professional collaboration."
                         }
                     }
                 }
@@ -50,11 +50,11 @@
                 "info": {
                     "sports": {
                         "title": "sports",
-                        "description": "<br>I am an avid sports enthusiast and lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+                        "description": "<br>I’m an active athlete — I run marathons, play football regularly, and swim frequently to stay fit and mentally sharp. These disciplines help me build endurance, discipline, and focus both on and off the field."
                     },
                     "favorite-games": {
                         "title": "favorite-games",
-                        "description": "<br>I am a passionate gamer with Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br><br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                        "description": "<br>I’m passionate about strategic and analytical games. I’m a pro-level chess player and also enjoy Sudoku and complex puzzles — experiences that reward deep thinking, pattern recognition, and structured problem-solving."
                     }
                 }
             }
@@ -64,8 +64,8 @@
         "direct": {
             "title": "contacts",
             "sources": {
-                "email": "user@gmail.com",
-                "phone": "+3598246359"
+                "email": "yt@yusufstack.com",
+                "phone": "+2348088374961"
             }
         },
         "social": {
@@ -75,14 +75,14 @@
                 "user": "username"
             },
             "facebook": {
-                "title": "Facebook profile",
-                "url": "https://facebook.com/",
-                "user": "username"
+                "title": "Google Drive",
+                "url": "https://drive.google.com/drive/folders/1yDFqY9Ib-OxwGjUVXRDtOEn7MrrXAQ7i",
+                "user": ""
             },
             "twitter": {
                 "title": "Twitter account",
-                "url": "https://twitter.com/",
-                "user": "username"
+                "url": "https://www.linkedin.com/in/",
+                "user": "yusuf-taiwo-grit/"
             }
         },
         "find_me_also_in": {
@@ -115,48 +115,78 @@
         "1": "83861a67e377633ee8368df01ee3a355",
         "2": "694c1f32332788a2ac7f37b09e5aa40e"
     },
-    "projects": {
-        "1": {
-            "title": "_ui-animations",
-            "description": "Duis aute irure dolor in velit esse cillum dolore.",
-            "img": "/images/projects/ui-animations2.png",
-            "tech": ["Flutter"],
-            "url": "https://github.com/"
-        },
-        "2": {
-            "title": "_ai-resources",
-            "description": "Duis aute irure dolor in velit esse cillum dolore.",
-            "img": "/images/projects/ai-resources.png",
-            "tech": ["Gatsby"],
-            "url": "https://github.com/"
-        },
-        "3": {
-            "title": "_worldmap",
-            "description": "Duis aute irure dolor in velit esse cillum dolore.",
-            "img": "/images/projects/worldmap.png",
-            "tech": ["Angular"],
-            "url": "https://github.com/"
-        },
-        "4": {
-            "title": "_ui-animations",
-            "description": "Duis aute irure dolor in velit esse cillum dolore.",
-            "img": "/images/projects/ui-animations.png",
-            "tech": ["React"],
-            "url": "https://github.com/"
-        },
-        "5": {
-            "title": "_tetris-game",
-            "description": "Duis aute irure dolor in velit esse cillum dolore.",
-            "img": "/images/projects/tetris-game.png",
-            "tech": ["React"],
-            "url": "https://github.com/"
-        },
-        "6": {
-            "title": "_ethereum",
-            "description": "Duis aute irure dolor in velit esse cillum dolore.",
-            "img": "/images/projects/ethereum.png",
-            "tech": ["Vue"],
-            "url": "https://github.com/"
-        }
-    }
+"projects": {
+  "1": {
+    "title": "kaijego",
+    "description": "Story-driven travel guide designed to help travelers explore destinations with limited passport access. Focused on editorial design, illustration, and narrative UX.",
+    "img": "/images/projects/kaijego.png",
+    "tech": ["Adobe"],
+    "url": "/projects/kaijego"
+  },
+  "2": {
+    "title": "uncover",
+    "description": "A skincare brand empowering dark-skinned women through inclusive design and strong visual identity. I led visual storytelling and brand direction.",
+    "img": "/images/projects/uncover.png",
+    "tech": ["Adobe"],
+    "url": "/projects/uncover"
+  },
+  "3": {
+    "title": "maxx-improve-guides",
+    "description": "Instructional product guides designed to help customers properly use men’s health products with clarity and confidence.",
+    "img": "/images/projects/maxx-improve-guides.png",
+    "tech": ["Adobe"],
+    "url": "/projects/maxx-improve-guides"
+  },
+  "4": {
+    "title": "chess-notion",
+    "description": "A Notion template system for chess players and coaches to analyze games, track performance, and improve decision-making through structured data.",
+    "img": "/images/projects/chess-notion.png",
+    "tech": ["Notion"],
+    "url": "/projects/chess-notion"
+  },
+  "5": {
+    "title": "osof-notion",
+    "description": "A collection of high-quality Notion systems and workflow templates that help creators streamline productivity, operations, goals, and business systems.",
+    "img": "/images/projects/osof-notion.png",
+    "tech": ["Notion"],
+    "url": "/projects/osofnotion"
+  },
+  "6": {
+    "title": "sofit",
+    "description": "A wellness and coaching system designed to help women build strength, confidence, and sustainable healthy habits through guided programs.",
+    "img": "/images/projects/sofit.png",
+    "tech": ["Zapier"],
+    "url": "/projects/sofit"
+  },
+  "7": {
+    "title": "compass-pdf",
+    "description": "Digital travel guides and resources to help travelers plan trips and explore countries with curated insights and tips.",
+    "img": "/images/projects/compass-pdf.png",
+    "tech": ["Gumroad"],
+    "url": "/projects/compasspdf"
+  },
+  "8": {
+    "title": "maxx-improve-ecommerce",
+    "description": "E-commerce experience for a men’s health brand, simplifying product discovery, education, and purchase flows on Shopify.",
+    "img": "/images/projects/maxx-improve-store.png",
+    "tech": ["Shopify"],
+    "url": "/projects/maxx-improve-ecommerce"
+  },
+  "9": {
+    "title": "pumpfiat",
+    "description": "A permission-based outreach platform providing verified prospect datasets and campaign tools to drive compliant, high-deliverability growth.",
+    "img": "/images/projects/pumpfiat.png",
+    "tech": ["Vue"],
+    "url": "/projects/pumpfiat"
+  },
+  "10": {
+  "title": "Notion",
+  "description": "Official Notion Partner & Community Ambassador — built and delivered custom Notion systems, workspaces, templates, and automation solutions for more than 100 businesses, startups, NGOs, creators and teams across Africa and beyond.",
+  "img": "/images/projects/notion.png",
+  "tech": ["Notion"],
+  "url": "/projects/notion"
+}
+}
+
+
 }

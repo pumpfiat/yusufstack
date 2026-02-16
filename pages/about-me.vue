@@ -48,7 +48,17 @@
         <div id="contact-sources" class="hidden lg:flex lg:flex-col my-2">
           <div v-for="(source, key) in config.contacts.direct.sources" :key="key" class="flex items-center mb-2">
             <img :src="'/icons/' + key + '.svg'" alt="" class="mx-4">
-            <a v-html="source" href="/" class="font-fira_retina text-menu-text hover:text-white"></a>
+            <a
+  :href="key === 'email'
+    ? `mailto:${source}`
+    : key === 'phone'
+      ? `tel:${source}`
+      : source"
+  class="font-fira_retina text-menu-text hover:text-white"
+>
+  {{ source }}
+</a>
+
           </div>
         </div>
 
@@ -95,7 +105,17 @@
         <div id="contacts" class="hidden">
           <div v-for="(source, key) in config.contacts.direct.sources" :key="key" class="flex items-center my-2">
             <img :src="'/icons/' + key + '.svg'" alt="">
-            <a v-html="source" href="/" class="font-fira_retina text-menu-text hover:text-white ml-4"></a>
+            <a
+  :href="key === 'email'
+    ? `mailto:${source}`
+    : key === 'phone'
+      ? `tel:${source}`
+      : source"
+  class="font-fira_retina text-menu-text hover:text-white ml-4"
+>
+  {{ source }}
+</a>
+
           </div>
         </div>
 
@@ -155,23 +175,7 @@
 
       </div>
 
-        <div id="gists-content" class="flex">
-        
-          <div id="gists" class="flex flex-col lg:px-6 lg:py-4 w-full overflow-hidden">
-            <!-- title -->
-            <h3 class="text-white lg:text-menu-text mb-4 text-sm">// Code snippet showcase:</h3>
-
-            <div class="flex flex-col overflow-scroll">
-              <!-- snippets -->
-              <GistSnippet data-aos="fade-down" v-for="(gist, key) in config.gists" :key="key" :id="gist" />
-            </div>
-          </div>
-
-          <!-- scroll bar -->
-          <div id="scroll-bar" class="h-full border-left hidden lg:flex justify-center py-1">
-            <div id="scroll"></div>
-          </div>
-        </div>
+<Testimonials />
       </div>
     </div>
   </main>
@@ -240,8 +244,12 @@
 
 #right, #left {
   height: 100%;
-  overflow: hidden;
 }
+
+#right {
+  overflow-y: auto;
+}
+
 
 #gists-content {
   height: 100%;

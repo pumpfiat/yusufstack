@@ -1,85 +1,131 @@
 <template>
-  	<main v-if="!loading" id="hello">
+  <main v-if="!loading" id="hello">
 
-    	<!-- gradients -->
-    	<div class="css-blurry-gradient-blue"></div>
-    	<div class="css-blurry-gradient-green"></div>
+    <!-- gradients -->
+    <div class="css-blurry-gradient-blue"></div>
+    <div class="css-blurry-gradient-green"></div>
 
-		<section class="hero">
-		
-			<div class="head">
-				<span>
-					Hi all, I am
-				</span>
-				<h1>{{ config.name }}</h1>
+    <section class="hero">
+    
+      <div class="head">
+        <span>
+          Hi all, I am
+        </span>
+        <h1>{{ config.name }}</h1>
         <span class="diple flex">
           >&nbsp;
-				<h2 class="line-1 anim-typewriter max-w-fit"> {{ config.role }} </h2>
+		  <h2 class="typewriter">
+  {{ roleText }}
+</h2>
+
         </span>
-			</div>
+      </div>
 
-			<div id="info">
-				<span class="action">
-					// complete the game to continue
-				</span>
-				<span :class="{hide: isMobile}">
-					// you can also see it on my Github page
-				</span>
-				<span :class="{hide: !isMobile}">
-					// find my profile on Github:
-				</span>
-				<p class="code">
-					<span class="identifier">
-						const
-					</span>
-					<span class="variable-name">
-						githubLink
-					</span>
-					<span class="operator">
-						=
-					</span>
-					<a class="string" :href="'https://github.com/' + config.contacts.social.github.user">
-						"https://github.com/{{ config.contacts.social.github.user }}"
-					</a>
-				</p>
-			</div>
-		</section>
+      <div id="info">
+        <span class="action">
+          // I build scalable web systems with clean architecture.
+        </span>
+        <span :class="{hide: isMobile}">
+          // E-commerce, SaaS, productivity systems, automation.
 
-		<section data-aos="fade-up" class="game" v-if="!isMobile">
-			<SnakeGame />
-		</section>
 
-	</main>
+        </span>
+        <span :class="{hide: !isMobile}">
+          // E-commerce, SaaS, productivity systems, automation.
+
+        </span>
+		<div class="cta-wrapper">
+  <RouterLink to="/projects" class="project-btn">
+    view-projects →
+  </RouterLink>
+</div>
+
+
+      </div>
+    </section>
+
+    <!-- Snake Game (kept but hidden on mobile as before – we can personalize later) -->
+    <section data-aos="fade-up" class="game" v-if="!isMobile">
+      <SnakeGame />
+    </section>
+
+  </main>
 </template>
 
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue'
-import DevConfig from '~/developer.json';
+import DevConfig from '~/developer.json'
 
 const config = ref(DevConfig)
 
 const isMobile = ref(false)
 const loading = ref(false)
 
+function handleResize() {
+  isMobile.value = window.innerWidth <= 1024
+}
+
+/* ─────────────────────────────────────
+   Clean Infinite Typewriter
+───────────────────────────────────── */
+
+const roles = [
+  'Creative Director',
+  'Official Notion Partner',
+  'Product Builder',
+  'Systems Designer',
+  'Brand Launcher'
+]
+
+const roleText = ref('')
+const roleIndex = ref(0)
+const isDeleting = ref(false)
+
+let timeout = null
+
+function typeEffect() {
+  const current = roles[roleIndex.value]
+
+  if (!isDeleting.value) {
+    roleText.value = current.substring(0, roleText.value.length + 1)
+
+    if (roleText.value === current) {
+      timeout = setTimeout(() => {
+        isDeleting.value = true
+        typeEffect()
+      }, 1500)
+      return
+    }
+  } else {
+    roleText.value = current.substring(0, roleText.value.length - 1)
+
+    if (roleText.value === '') {
+      isDeleting.value = false
+      roleIndex.value = (roleIndex.value + 1) % roles.length
+    }
+  }
+
+  timeout = setTimeout(typeEffect, isDeleting.value ? 40 : 60)
+}
+
 onMounted(() => {
-  if (window.innerWidth <= 1024) isMobile.value = true
+  handleResize()
   window.addEventListener('resize', handleResize)
+  typeEffect()
 })
 
 onBeforeUnmount(() => {
   window.removeEventListener('resize', handleResize)
+  clearTimeout(timeout)
 })
-
-function handleResize() {
-  if (window.innerWidth <= 1024) {
-    isMobile.value = true
-  } else {
-    isMobile.value = false
-  }
-}
 </script>
 
+
 <style scoped>
+/* ────────────────────────────────────────────────
+   Your original styles – unchanged except minor cleanup
+   ──────────────────────────────────────────────── */
+
 #hello {
   display: flex;
   height: 100%;
@@ -88,29 +134,69 @@ function handleResize() {
   padding-left: 275px;
   overflow: hidden;
 }
-.hero {
-	width: 100%;
-	justify-content: center;
-	
+/* ─────────────────────────────────────
+   Premium Project Button
+───────────────────────────────────── */
+
+.cta-wrapper {
+  margin-top: 2rem;
 }
+
+.project-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 12px 20px;
+
+  font-family: 'Fira Code Retina';
+  font-size: 14px;
+  letter-spacing: 0.5px;
+
+  color: #E5E9F0;
+  text-decoration: none;
+
+  border: 1px solid #1E2D3D;
+  border-radius: 8px;
+
+  background-color: #011221;
+
+  transition: all 0.25s ease;
+}
+
+/* Hover */
+.project-btn:hover {
+  border-color: #43D9AD;
+  color: #43D9AD;
+  background-color: rgba(67, 217, 173, 0.05);
+  transform: translateY(-2px);
+}
+
+/* Active */
+.project-btn:active {
+  transform: translateY(0px);
+}
+
+
+.hero {
+  width: 100%;
+  justify-content: center;
+}
+
 .game {
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-	height: 100%;
-	justify-content: center;
-/* 	align-items: center; */
-	z-index: 20;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  z-index: 20;
 }
 
 #hello .hero {
-	display: flex;
-	flex-direction: column;
-	/* display: grid;
-	grid-template-columns: repeat(12, minmax(0, 1fr)); */
-	margin: 0rem;
+  display: flex;
+  flex-direction: column;
+  margin: 0rem;
 }
-
 
 #hello .head span {
   font-size: 18px;
@@ -124,8 +210,8 @@ function handleResize() {
   line-height: 1;
   color: #E5E9F0;
   font-family: 'Fira Code Regular';
-  padding-top: 1rem; /* 16px */
-  padding-bottom: 1rem; /* 16px */
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 #hello .head h2, #hello .head .diple {
@@ -140,8 +226,8 @@ function handleResize() {
 }
 
 #info {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 #info > span {
@@ -149,7 +235,7 @@ function handleResize() {
   line-height: 1;
   color: #8da9c6;
   font-family: 'Fira Code Retina';
-  padding-bottom: 1rem; /* 16px */
+  padding-bottom: 1rem;
 }
 
 .code {
@@ -176,11 +262,11 @@ function handleResize() {
 }
 
 #info {
-	padding-block: 2.5rem;
+  padding-block: 2.5rem;
 }
 
 #info .action {
-	display: flex
+  display: flex
 }
 
 .hide {
@@ -193,10 +279,10 @@ function handleResize() {
   right: 5%;
   width: 300px;
   height: 300px;
-	border-radius: 0% 0% 50% 50%;
+  border-radius: 0% 0% 50% 50%;
   rotate: 10deg;
-	filter: blur(70px);
-  background: radial-gradient(circle at 50% 50%,rgba(77, 91, 206, 1), rgba(76, 0, 255, 0));
+  filter: blur(70px);
+  background: radial-gradient(circle at 50% 50%, rgba(77, 91, 206, 1), rgba(76, 0, 255, 0));
   opacity: 0.5;
   z-index: 10;
 }
@@ -207,99 +293,83 @@ function handleResize() {
   right: 30%;
   width: 300px;
   height: 300px;
-	border-radius: 0% 50% 0% 50%;
-	filter: blur(70px);
-  background: radial-gradient(circle at 50% 50%,rgba(67, 217, 173, 1), rgba(76, 0, 255, 0));
+  border-radius: 0% 50% 0% 50%;
+  filter: blur(70px);
+  background: radial-gradient(circle at 50% 50%, rgba(67, 217, 173, 1), rgba(76, 0, 255, 0));
   opacity: 0.5;
   z-index: 10;
 }
 
-#info {
-  font-size: 14px;
+/* Typewriter Animation */
+.typewriter {
+  display: inline-block;
+  position: relative;
 }
 
-/* Typewrite Animation */
-
-.line-1 {
-    width: fit-content;
-    border-right: 3px solid rgba(255,255,255,.75);
-    white-space: nowrap;
-    overflow: hidden;
-    padding-right: 2px;
+.typewriter::after {
+  content: '|';
+  margin-left: 4px;
+  animation: blink 1s infinite;
 }
 
-.anim-typewriter{
-    animation: typewriter 3.5s steps(40) 1s 1 normal both,
-    blinkTextCursor 800ms steps(40) infinite normal;
-}
-
-@keyframes typewriter{
-  from{width: 0;}
-  to{width: 100%;}
-}
-
-@keyframes blinkTextCursor{
-  from{border-right-color: rgba(255,255,255,.75);}
-  to{border-right-color: transparent;}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
 
 
-/* mobile */
+/* Mobile */
 @media (max-width: 768px) {
+  #hello {
+    padding-left: 0;
+  }
 
-	#hello {
-		padding-left: 0;
-	}
+  #hello .hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 1.75rem;
+  }
 
-	#hello .hero {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		margin: 1.75rem; /* 28px */
-	}
-	.head {
-		padding-top: 4rem; /* 40px */
-	}
+  .head {
+    padding-top: 4rem;
+  }
 
-	#hello .head h2, #hello .head .diple {
-		font-size: 20px;
-		color: #43D9AD;
-	}
-	
-	#info .action {
-		display: none;
-	}
+  #hello .head h2, #hello .head .diple {
+    font-size: 20px;
+    color: #43D9AD;
+  }
 
+  #info .action {
+    display: none;
+  }
 }
 
-/* tablet */
+/* Tablet */
 @media (min-width: 768px) and (max-width: 1024px) {
-	#hello {
-		padding-left: 0;
-	}
-	#hello .hero {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		margin: 1.75rem; /* 28px */
-	}
-	.head {
-		padding-top: 4rem; /* 40px */
-	}
-
+  #hello {
+    padding-left: 0;
+  }
+  #hello .hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1.75rem;
+  }
+  .head {
+    padding-top: 4rem;
+  }
 }
 
+/* Mid-large screens */
 @media (min-width: 1024px) and (max-width: 1320px) {
-	#hello {
-		padding-left: 135px;
-	}
+  #hello {
+    padding-left: 135px;
+  }
 }
-
 
 /* LG */
-
 @media (min-width: 1024px) {
-
   .css-blurry-gradient-blue {
     position: fixed;
     bottom: 10%;
@@ -324,13 +394,12 @@ function handleResize() {
   }
 }
 
-@media (min-width: 1920px){
-	#hello {
-		padding-left: 310px;
-	}
-	#hello .head h1 {
-		font-size: 62px;
-	}
+@media (min-width: 1920px) {
+  #hello {
+    padding-left: 310px;
+  }
+  #hello .head h1 {
+    font-size: 62px;
+  }
 }
-
 </style>
