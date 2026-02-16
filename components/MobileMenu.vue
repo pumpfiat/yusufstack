@@ -49,23 +49,30 @@ const menuOpen = ref(false);
 function toggleMobileMenu(){
   menuOpen.value = !menuOpen.value;
 
+  if (!process.client) return;
+
   const menu = document.getElementById('menu');
-  menu.classList.toggle('hidden');
+  if (menu) menu.classList.toggle('hidden');
 
   const page = document.getElementsByTagName('main')[0];
   // Hide / show section
-  if (page.style.display === 'none') {
-    page.style.display = 'flex';
-  } else {
-    page.style.display = 'none';
+  if (page) {
+    if (page.style.display === 'none') {
+      page.style.display = 'flex';
+    } else {
+      page.style.display = 'none';
+    }
   }
 };
 
 function goHome(){
+  if (!process.client) return;
+
   const menu = document.getElementById('menu');
-  if (!menu.classList.contains('hidden')) {
+  if (menu && !menu.classList.contains('hidden')) {
     menu.classList.toggle('hidden');
-    document.getElementsByTagName('main')[0].style.display = 'flex';
+    const mainEl = document.getElementsByTagName('main')[0];
+    if (mainEl) mainEl.style.display = 'flex';
     menuOpen.value = !menuOpen.value;
   }
 };

@@ -313,8 +313,12 @@ export default {
       this.currentSection = section.title
       this.folder = Object.keys(section.info)[0]
 
-      document.getElementById('folders-' + section.title).classList.toggle('hidden') // show folders
-      document.getElementById('section-arrow-' + section.title).classList.toggle('rotate-90'); // rotate arrow
+      if (process.client) {
+        const foldersEl = document.getElementById('folders-' + section.title)
+        const arrowEl = document.getElementById('section-arrow-' + section.title)
+        if (foldersEl) foldersEl.classList.toggle('hidden') // show folders
+        if (arrowEl) arrowEl.classList.toggle('rotate-90'); // rotate arrow
+      }
     },
     focusCurrentFolder(folder) {
       this.folder = folder.title
@@ -326,12 +330,19 @@ export default {
      * TODO:  Además de girar el icono del diple.
      */
     toggleFiles() {
-      document.getElementById('file-' + this.folder).classList.toggle('hidden')
+      if (process.client) {
+        const fileEl = document.getElementById('file-' + this.folder)
+        if (fileEl) fileEl.classList.toggle('hidden')
+      }
     },
     /* Mobile */
     showContacts() {
-      document.getElementById('contacts').classList.toggle('hidden')
-      document.getElementById('section-arrow').classList.toggle('rotate-90'); // rotate arrow
+      if (process.client) {
+        const contactsEl = document.getElementById('contacts')
+        const arrowEl = document.getElementById('section-arrow')
+        if (contactsEl) contactsEl.classList.toggle('hidden')
+        if (arrowEl) arrowEl.classList.toggle('rotate-90'); // rotate arrow
+      }
     },
   },
   mounted(){

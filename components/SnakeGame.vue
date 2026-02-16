@@ -120,7 +120,10 @@
       startGame() {
 
         // hide start button
-        document.getElementById("start-button").style.display = "none";
+        if (process.client) {
+          const btn = document.getElementById("start-button");
+          if (btn) btn.style.display = "none";
+        }
 
         // start game
         this.gameStarted = true;
@@ -139,11 +142,15 @@
       },
       startAgain() {
         // Mostrar botón de start-game
-        document.getElementById("start-button").style.display = "block";
-        
-        // Ocultar game over
-        document.getElementById("game-over").style.display = "none";
-        document.getElementById("congrats").style.display = "none";
+        if (process.client) {
+          const startBtn = document.getElementById("start-button");
+          const gameOverEl = document.getElementById("game-over");
+          const congratsEl = document.getElementById("congrats");
+          
+          if (startBtn) startBtn.style.display = "block";
+          if (gameOverEl) gameOverEl.style.display = "none";
+          if (congratsEl) congratsEl.style.display = "none";
+        }
 
 
         // reiniciar datos del juego
@@ -213,14 +220,21 @@
 
           if (newX === this.food.x && newY === this.food.y) {
             this.score++;
-            const scoreFoods = document.getElementsByClassName("food");
-            scoreFoods[this.score - 1].style.opacity = 1;
+            if (process.client) {
+              const scoreFoods = document.getElementsByClassName("food");
+              if (scoreFoods[this.score - 1]) {
+                scoreFoods[this.score - 1].style.opacity = 1;
+              }
+            }
 
             if(this.score === 10) {
               this.snake.unshift({ x: newX, y: newY });
               this.food = { x: null, y: null }
               clearInterval(this.gameInterval);
-              document.getElementById('congrats').style.display = 'block'
+              if (process.client) {
+                const congratsEl = document.getElementById('congrats');
+                if (congratsEl) congratsEl.style.display = 'block';
+              }
               this.gameOver = true;
               this.gameStarted = false;
             } else {
@@ -232,7 +246,10 @@
           }
         } else {
           clearInterval(this.gameInterval);
-          document.getElementById('game-over').style.display = 'block'
+          if (process.client) {
+            const gameOverEl = document.getElementById('game-over');
+            if (gameOverEl) gameOverEl.style.display = 'block';
+          }
           this.gameStarted = false;
           this.gameOver = true;
         }
@@ -240,9 +257,13 @@
       },
       render() {
         let gameScreen = this.$refs.gameScreen;
+        if (!gameScreen) return;
         gameScreen.innerHTML = "";
 
-        const cellSize = window.innerWidth > 1536 ? "10px" : "8px";
+        let cellSize = "8px";
+        if (process.client && typeof window !== 'undefined') {
+          cellSize = window.innerWidth > 1536 ? "10px" : "8px";
+        }
 
         for (let i = 0; i < 40; i++) {
 
@@ -301,9 +322,11 @@
       },
     restartScore(){
       this.score = 0;
-      const scoreFoods = document.getElementsByClassName("food");
-      for (let i = 0; i < scoreFoods.length; i++) {
-        scoreFoods[i].style.opacity = 0.3;
+      if (process.client) {
+        const scoreFoods = document.getElementsByClassName("food");
+        for (let i = 0; i < scoreFoods.length; i++) {
+          scoreFoods[i].style.opacity = 0.3;
+        }
       }
     },
     move(direction){
@@ -332,6 +355,7 @@
     }
   },
   mounted() {
+    if (!process.client) return;
     document.addEventListener("keydown", event => {
       if (this.gameStarted) {
         switch (event.keyCode) {
@@ -374,9 +398,9 @@
       x: Math.floor(Math.random() * 24),
       y: Math.floor(Math.random() * 40)
     }; */
-    window.onresize = () => {
+    window.addEventListener('resize', () => {
       this.render();
-    };
+    });
 
     this.render();
 

@@ -158,8 +158,9 @@ export default {
             }
         },
         showComment(id) {
+            if (!process.client) return;
             let comment = document.getElementById('comment' + id)
-            comment.classList.toggle('hidden')
+            if (comment) comment.classList.toggle('hidden')
         }
     },
     components: {

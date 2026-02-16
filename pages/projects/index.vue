@@ -75,7 +75,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, nextTick } from 'vue'
 import DevConfig from '~/developer.json';
 
 const config = ref(DevConfig)
@@ -85,11 +85,9 @@ const filters = ref(['all'])
 const showFilters = ref(true)
 const projects = ref(config.value.projects)
 
-function filterProjects(tech) {
-  document.getElementById('icon-tech-' + tech).classList.toggle('active')
-  document.getElementById('title-tech-' + tech).classList.toggle('active')
-
-  const check = document.getElementById(tech)
+async function filterProjects(tech) {
+  // Update state first
+  const check = document.querySelector(`#${tech}`)
   if (check.checked) {
     filters.value = filters.value.filter((item) => item !== 'all')
     filters.value.push(tech)
@@ -99,12 +97,25 @@ function filterProjects(tech) {
   }
   filters.value[0] == 'all' ? projects.value = config.value.projects : projects.value = filterProjectsBy(filters.value)
 
-  if (projects.value.length === 0) {
-    document.getElementById('projects-case').classList.remove('grid')
-    document.getElementById('not-found').classList.remove('hidden')
-  } else {
-    document.getElementById('projects-case').classList.add('grid')
-    document.getElementById('not-found').classList.add('hidden')
+  // Wait for DOM to update, then manipulate
+  await nextTick()
+
+  if (process.client) {
+    const iconEl = document.getElementById('icon-tech-' + tech)
+    const titleEl = document.getElementById('title-tech-' + tech)
+    const projectsEl = document.getElementById('projects-case')
+    const notFoundEl = document.getElementById('not-found')
+
+    if (iconEl) iconEl.classList.toggle('active')
+    if (titleEl) titleEl.classList.toggle('active')
+
+    if (projects.value.length === 0) {
+      if (projectsEl) projectsEl.classList.remove('grid')
+      if (notFoundEl) notFoundEl.classList.remove('hidden')
+    } else {
+      if (projectsEl) projectsEl.classList.add('grid')
+      if (notFoundEl) notFoundEl.classList.add('hidden')
+    }
   }
 }
 

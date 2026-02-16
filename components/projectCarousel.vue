@@ -52,16 +52,18 @@ const slidesPerView = ref(4)
 let interval = null
 
 function updateSlidesPerView() {
-  const w = window.innerWidth
+  if (process.client) {
+    const w = window.innerWidth
 
-  if (w >= 1024) slidesPerView.value = 4
-  else if (w >= 768) slidesPerView.value = 3
-  else if (w >= 640) slidesPerView.value = 2
-  else slidesPerView.value = 1
+    if (w >= 1024) slidesPerView.value = 4
+    else if (w >= 768) slidesPerView.value = 3
+    else if (w >= 640) slidesPerView.value = 2
+    else slidesPerView.value = 1
 
-  const max = props.totalSlides - slidesPerView.value
-  if (currentSlide.value > max) {
-    currentSlide.value = Math.max(0, max)
+    const max = props.totalSlides - slidesPerView.value
+    if (currentSlide.value > max) {
+      currentSlide.value = Math.max(0, max)
+    }
   }
 }
 

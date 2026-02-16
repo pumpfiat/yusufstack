@@ -112,22 +112,30 @@ export default {
     },
     methods: {
         open(elementId) {
+            if (!process.client) return;
+            
             const element = document.getElementById(elementId);
+            if (!element) return;
+            
             const arrow = element.querySelector('.arrow');
             const links = element.querySelector('.links');
 
-            if (links.style.display === 'block') {
-                links.style.display = 'none';
-                arrow.style.transform = 'rotate(0deg)';
-            } else {
-                links.style.display = 'block';
-                arrow.style.transform = 'rotate(90deg)';
+            if (links && arrow) {
+                if (links.style.display === 'block') {
+                    links.style.display = 'none';
+                    arrow.style.transform = 'rotate(0deg)';
+                } else {
+                    links.style.display = 'block';
+                    arrow.style.transform = 'rotate(90deg)';
+                }
             }
         }
     },
     mounted() {
   // Wait for DOM to be fully updated
   this.$nextTick(() => {
+    if (!process.client) return;
+    
     const submenus = document.querySelectorAll('.submenu');
 
     submenus.forEach(submenu => {

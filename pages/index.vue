@@ -62,7 +62,9 @@ const isMobile = ref(false)
 const loading = ref(false)
 
 function handleResize() {
-  isMobile.value = window.innerWidth <= 1024
+  if (process.client) {
+    isMobile.value = window.innerWidth <= 1024
+  }
 }
 
 /* ─────────────────────────────────────

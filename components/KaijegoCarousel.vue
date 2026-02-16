@@ -42,11 +42,14 @@ const totalSlides = 16
 let interval = null
 
 const slidesPerView = computed(() => {
-  const w = window.innerWidth
-  if (w >= 1024) return 4
-  if (w >= 768) return 3
-  if (w >= 640) return 2
-  return 1
+  if (process.client) {
+    const w = window.innerWidth
+    if (w >= 1024) return 4
+    if (w >= 768) return 3
+    if (w >= 640) return 2
+    return 1
+  }
+  return 4 // Default for SSR
 })
 
 function next() {

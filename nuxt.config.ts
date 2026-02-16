@@ -37,8 +37,8 @@ export default defineNuxtConfig({
         // ...
       ],
       link: [
-        { rel: 'manifest', href: 'pwa/manifest.json' },
-        { rel: 'apple-touch-icon', href: 'pwa/icons/apple-touch-icon.png' },
+        { rel: 'manifest', href: '/pwa/manifest.json' },
+        { rel: 'apple-touch-icon', href: '/pwa/icons/apple-touch-icon.png' },
       ],
     },
   },
@@ -68,6 +68,17 @@ export default defineNuxtConfig({
     exposeConfig: true, // true to resolve the tailwind config in runtime. https://tailwindcss.nuxt.dev/getting-started/options/#exposeconfig
     injectPosition: 0,
     viewer: false,
+  },
+
+  /**
+   * * Nitro Prerender Config
+   * Ignore crawling non-page static assets
+   */
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      ignore: [/^\/pwa/],
+    }
   },
 
   /**
