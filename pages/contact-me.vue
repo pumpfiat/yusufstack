@@ -14,7 +14,7 @@
       <div id="contacts" class="submenu">
         <div class="title" @click="open('contacts')">
           <img class="arrow" src="/icons/arrow.svg" />
-          <h3>contacts</h3>
+          <h3>Email</h3>
         </div>
 
         <div class="links">
@@ -25,14 +25,14 @@
               yt@yusufstack.com
             </a>
           </div>
-
-          <div class="link">
-            <img src="/icons/phone.svg" />
+<!--          <div class="link">
+            <img src="/icons/location.svg" />
             <a href="tel:+2348088374961"
                class="font-fira_retina text-menu-text hover:text-white">
               +234 808 837 4961
             </a>
-          </div>
+          </div>-->
+
         </div>
       </div>
 
