@@ -1,5 +1,5 @@
 <template>
-  <main class="flex flex-col flex-auto lg:flex-row overflow-hidden">
+  <main id="projects" class="page flex flex-col flex-auto lg:flex-row overflow-hidden">
 
     <div id="mobile-page-title">
       <h2>_projects</h2>
@@ -23,9 +23,9 @@
       <nav id="filters" class="w-full flex-col">
 
         <div v-for="tech in techs" :key="tech" class="flex items-center py-2">
-          <input type="checkbox" :id="tech" @click="filterProjects(tech)">
-          <img :id="'icon-tech-' + tech" :src="'/icons/techs/' + tech + '.svg'" alt="" class="tech-icon w-5 h-5 mx-4">
-          <label :for="tech" :id="'title-tech-' + tech">{{ tech }}</label>
+          <input type="checkbox" :id="tech.replace(' ', '-')" @click="filterProjects(tech)">
+          <img :id="'icon-tech-' + tech.replace(' ', '-')" :src="'/icons/techs/' + tech + '.svg'" alt="" class="tech-icon w-5 h-5 mx-4">
+          <label :for="tech.replace(' ', '-')" :id="'title-tech-' + tech.replace(' ', '-')">{{ tech }}</label>
         </div>
       </nav>
     </div>
@@ -80,14 +80,15 @@ import DevConfig from '~/developer.json';
 
 const config = ref(DevConfig)
 
-const techs = ['Notion', 'Zapier', 'Vue', 'Shopify', 'Gumroad', 'Adobe']
+const techs = ['Notion', 'Zapier', 'Web Dev', 'Shopify', 'Gumroad', 'Adobe']
 const filters = ref(['all'])
 const showFilters = ref(true)
 const projects = ref(config.value.projects)
 
 async function filterProjects(tech) {
   // Update state first
-  const check = document.querySelector(`#${tech}`)
+  const techId = tech.replace(' ', '-')
+  const check = document.querySelector(`#${techId}`)
   if (check.checked) {
     filters.value = filters.value.filter((item) => item !== 'all')
     filters.value.push(tech)
@@ -101,8 +102,8 @@ async function filterProjects(tech) {
   await nextTick()
 
   if (process.client) {
-    const iconEl = document.getElementById('icon-tech-' + tech)
-    const titleEl = document.getElementById('title-tech-' + tech)
+    const iconEl = document.getElementById('icon-tech-' + techId)
+    const titleEl = document.getElementById('title-tech-' + techId)
     const projectsEl = document.getElementById('projects-case')
     const notFoundEl = document.getElementById('not-found')
 

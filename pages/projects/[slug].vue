@@ -127,6 +127,19 @@ class="
   <div v-html="projectBottom"></div>
 </template>
 
+<template v-if="slug === 'ctg-method'">
+  <div v-html="projectTop"></div>
+
+  <CTGCarousel :total-slides="10" extension="png" title="CTG Visual Assets" />
+
+  <div v-html="projectBottom"></div>
+</template>
+
+<template v-if="slug === 'rroomfies'">
+  <div v-html="projectTop"></div>
+  <div v-html="projectBottom"></div>
+</template>
+
 <template v-if="slug === 'chess-notion'">
   <div v-html="projectTop"></div>
   <div v-html="projectBottom"></div>
@@ -175,6 +188,7 @@ class="
 <script setup>
 import DevConfig from '~/developer.json'
 import KaijegoCarousel from '~/components/KaijegoCarousel.vue'
+import CTGCarousel from '~/components/CTGCarousel.vue'
 
 
 const route = useRoute()
@@ -286,6 +300,93 @@ projectTop.value = `
     </div>
   `
 }
+
+if (slug === 'ctg-method') {
+
+projectTop.value = `
+  <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-10 text-orange-400">Discipline is the fuel; systems are the engine.</h2>
+
+  <div class="grid md:grid-cols-2 gap-10 mb-14 text-gray-300">
+    <div>
+      <h3 class="text-xl font-semibold mb-4 text-white">Key Facts</h3>
+      <ul class="space-y-2">
+        <li><strong>Period:</strong> March 2026–Present</li>
+        <li><strong>Position:</strong> Brand & Product Designer</li>
+        <li><strong>Brand:</strong> CTG (Certified Traders Group)</li>
+        <li><strong>Impact:</strong> 50,000+ students reached; 120 students enrolled in Platinum</li>
+      </ul>
+    </div>
+    <div>
+      <p class="italic text-gray-400">
+        A full ecosystem build for Certified Traders Group; spanning brand identity, premium merchandise, a redesigned Academy platform, and the launch of a new Platinum tier.
+      </p>
+    </div>
+  </div>
+
+  <h3 class="text-2xl font-semibold mt-14 mb-5">Company</h3>
+  <p class="mb-7 leading-relaxed">Certified Traders Group (CTG) is a private trading ecosystem built for serious traders; combining mentorship, live signals, funded-account support, and structured education under one guiding principle: Discipline, Consistency, Execution.</p>
+
+  <h3 class="text-2xl font-semibold mt-14 mb-5">Challenge</h3>
+  <p class="mb-7 leading-relaxed">CTG needed a cohesive visual identity that felt premium and serious while preparing to launch the Platinum tier with physical and digital touchpoints.</p>
+
+  <h3 class="text-2xl font-semibold mt-14 mb-6">Details</h3>
+  <p class="mb-12 leading-relaxed">I led design across brand, merchandise, an Academy redesign, and an illustrated educational guide, culminating in a premium launch for Platinum.</p>
+
+  <div class="mt-16">
+    <img src="/images/projects/CTG/CTG_hero.png" alt="Forex 101 book spread" class="w-full rounded-2xl shadow-2xl object-cover" />
+    <p class="text-gray-400 italic mt-4">A collection of spreads from "Forex 101," the illustrated educational guide I designed for CTG Academy: breaking down complex trading concepts into approachable, visual storytelling for new students.</p>
+    <p class="mt-6 text-gray-300 leading-relaxed">
+      <strong>Forex 101 – CTG Academy Guide</strong>
+      <br/><br/>
+      For CTG's first educational publication, I designed a full illustrated book that turned dense trading theory into something genuinely enjoyable to read. Each chapter, from "What is the Forex Market?" to major currency pairs, liquidity, and market structure — was paired with custom illustration, data visualizations, and playful character work to keep beginners engaged without dumbing down the content. The cover itself set the tone: a painterly, editorial-style illustration that felt more like a collector's book than a typical trading PDF. Charts, comparison tables, and infographics were rebuilt from raw data into CTG's brand system, so every page reinforced the same premium, disciplined identity as the rest of the ecosystem. The result was a resource students could actually finish — and want to hold onto.
+    </p>
+  </div>
+`
+
+projectBottom.value = `
+  <h3 class="text-2xl font-semibold mt-16 mb-5">Opportunity</h3>
+  <p class="mb-7 leading-relaxed">Working with CTG, I designed a cohesive dark, high-contrast visual identity, merchandise, a welcome kit, and an Academy experience that reinforced discipline-first learning.</p>
+
+  <h3 class="text-2xl font-semibold mt-14 mb-6">Impact</h3>
+  <p class="mb-7 leading-relaxed">The rebuild reached over 5,000 students with books and merchandise and launched Platinum with 120 early enrollments.</p>
+
+  <!-- Merch & Platform sections (images + italic captions + detailed copy) -->
+  <div class="mt-12">
+    <div class="mb-8">
+      <img src="/images/projects/CTG/CTG_hero_2.png" alt="CTG Elite Trader Kit & Merchandise" class="w-full rounded-lg border border-[#1E2D3D]" />
+      <p class="text-gray-400 italic mt-3">CTG Elite Trader Kit & Merchandise — a look at the premium merchandise and welcome kit designed to make membership feel tangible from day one.</p>
+      <p class="mt-4 text-gray-300 leading-relaxed">This was about translating a digital membership into something physical members could hold, wear, and feel proud of. I designed the full merchandise line — caps, performance jerseys, and bomber jackets — each carrying the brand's core values ("Discipline," "Consistency," "Execution") as subtle, embroidered detail rather than loud branding. Alongside that, I designed the Elite Trader welcome kit: a boxed set including a leather-bound trading journal, the Elite Trader Handbook, a member card, and branded stationery, all packaged to feel like an initiation rather than a freebie. Every material choice, color, and finish was designed to match CTG's dark, high-contrast identity — so unboxing the kit felt as premium as the trading education itself.</p>
+    </div>
+
+    <div class="mb-8">
+      <img src="/images/projects/CTG/CTG_hero_3.png" alt="CTG Academy Platform UI" class="w-full rounded-lg border border-[#1E2D3D]" />
+      <p class="text-gray-400 italic mt-3">CTG Academy Platform — screens from the Academy product experience highlighting dashboards, readiness checks, and progression tracking.</p>
+      <p class="mt-4 text-gray-300 leading-relaxed">For the Academy platform, I designed the core product experience students use to progress through CTG's ranked curriculum, from Foundation Trader through Developing, Disciplined, and Professional. This included the main dashboard (tracking streaks, rank progress, and weekly checkpoints), Readiness Check flows that confirm a student has actually absorbed a lesson before moving on, a visual roadmap laying out the full 12-week journey, and a resource library organizing CTG's growing catalog of lessons, templates, and case studies. The UI needed to feel less like a typical course platform and more like a trading terminal — dark, data-dense, and precise; reinforcing the idea that learning to trade is itself a disciplined process, not a passive one.</p>
+    </div>
+  </div>
+
+  <h3 class="text-2xl font-semibold mt-14 mb-6">Testimonial</h3>
+  <blockquote class="border-l-4 border-orange-500 pl-6 py-2 my-10 italic text-lg text-gray-300">
+    "Working with Yusuf has been an incredible experience. He reached out to us out of the blue and, before ever joining the project, had already identified opportunities within our platform and presented thoughtful solutions that aligned with our vision. What impressed me most was how quickly he integrated with our team. Without a lengthy onboarding process, he was able to collaborate effectively with our developers, understand the product, and deliver meaningful work for our audience in just four weeks."
+    <footer class="mt-6 text-base not-italic text-gray-400">— Dr. Esther Makaripe, Founder, Certified Traders Group</footer>
+  </blockquote>
+
+  <h3 class="text-2xl font-semibold mt-14 mb-6">Core Skills</h3>
+  <div class="flex flex-wrap gap-3 mb-12">
+    <span class="px-4 py-2 bg-[#0D1B2A] border border-[#1E2D3D] rounded-lg text-sm">Visual Storytelling</span>
+    <span class="px-4 py-2 bg-[#0D1B2A] border border-[#1E2D3D] rounded-lg text-sm">Art Direction</span>
+    <span class="px-4 py-2 bg-[#0D1B2A] border border-[#1E2D3D] rounded-lg text-sm">Product Design</span>
+    <span class="px-4 py-2 bg-[#0D1B2A] border border-[#1E2D3D] rounded-lg text-sm">Brand Identity</span>
+    <span class="px-4 py-2 bg-[#0D1B2A] border border-[#1E2D3D] rounded-lg text-sm">UI/UX Design</span>
+    <span class="px-4 py-2 bg-[#0D1B2A] border border-[#1E2D3D] rounded-lg text-sm">Merchandise Design</span>
+    <span class="px-4 py-2 bg-[#0D1B2A] border border-[#1E2D3D] rounded-lg text-sm">Publishing & Editorial</span>
+    <span class="px-4 py-2 bg-[#0D1B2A] border border-[#1E2D3D] rounded-lg text-sm">Innovation</span>
+    <span class="px-4 py-2 bg-[#0D1B2A] border border-[#1E2D3D] rounded-lg text-sm">Adobe Suites</span>
+    <span class="px-4 py-2 bg-[#0D1B2A] border border-[#1E2D3D] rounded-lg text-sm">Canva</span>
+  </div>
+`
+
+}
 else if (slug === 'uncover') {
   projectTop.value = `
     <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-10 text-orange-400">
@@ -382,6 +483,79 @@ else if (slug === 'uncover') {
       <span class="px-4 py-2 bg-[#0D1B2A] border border-[#1E2D3D] rounded-lg text-sm">Diversity & Inclusion</span>
       <span class="px-4 py-2 bg-[#0D1B2A] border border-[#1E2D3D] rounded-lg text-sm">Adobe Suites</span>
       <span class="px-4 py-2 bg-[#0D1B2A] border border-[#1E2D3D] rounded-lg text-sm">Canva</span>
+    </div>
+  `
+}
+else if (slug === 'rroomfies') {
+
+  projectTop.value = `
+    <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-10 text-orange-400">Retirement isn't a dream — it's a spreadsheet with a deadline.</h2>
+
+    <div class="grid md:grid-cols-2 gap-10 mb-14 text-gray-300">
+      <div>
+        <h3 class="text-xl font-semibold mb-4 text-white">Key Facts</h3>
+        <ul class="space-y-2">
+          <li><strong>Position:</strong> No-Code Expert / Product Designer</li>
+          <li><strong>Platform:</strong> Notion</li>
+          <li><strong>Period:</strong> 2026</li>
+          <li><strong>Client:</strong> Jane Tsang (rroomfies)</li>
+          <li><strong>Impact:</strong> Sold to her audience of 1M+ followers</li>
+          <li><strong>Solution:</strong> Notion + custom dashboard architecture</li>
+        </ul>
+      </div>
+      <div>
+        <p class="italic text-gray-400">A fully custom Notion-based Finance Tracker built for Jane Tsang (rroomfies) — designed to help her audience budget, save, and track their path toward early retirement.</p>
+      </div>
+    </div>
+
+    <h3 class="text-2xl font-semibold mt-14 mb-5">Company</h3>
+    <p class="mb-7 leading-relaxed">Jane Tsang, known online as rroomfies, is a Toronto-based finance influencer with over a million followers across social media, known for breaking down personal finance, budgeting, and investing in a way that's honest, relatable, and actionable. Jane's own goal — retiring before 30 — sits at the center of her content, and her audience looks to her not just for advice, but for the actual tools to get there.</p>
+
+    <h3 class="text-2xl font-semibold mt-14 mb-5">Challenge</h3>
+    <p class="mb-7 leading-relaxed">Jane's audience wanted more than tips and videos — they wanted a system. Personal finance content is everywhere, but most people still track their money in scattered spreadsheets, banking apps, and notes that don't talk to each other. Jane needed a single, structured tool that reflected her own approach to money — one that could turn her philosophy on saving, budgeting, and FIRE (Financial Independence, Retire Early) planning into something her followers could actually use every day, without needing to be a spreadsheet expert.</p>
+
+    <h3 class="text-2xl font-semibold mt-14 mb-6">Details</h3>
+    <p class="mb-8 leading-relaxed">A look inside the Finance Tracker I built for Jane — from income and expense logging to savings goals, allocation rules, and a full FIRE planner. Designed to turn her financial philosophy into a daily-use system her audience could run their own money through.</p>
+
+    <div class="mt-16">
+      <img src="/images/projects/Finance_Tracker/Finance_Tracker_Hero.png" alt="rroomfies Finance Tracker" class="w-full rounded-2xl shadow-2xl object-cover" />
+      <p class="text-gray-400 italic mt-4">A fully custom Notion Finance Tracker — built for Jane Tsang's audience to turn her FIRE philosophy into a daily-use money system.</p>
+    </div>
+  `
+
+  projectBottom.value = `
+    <h3 class="text-2xl font-semibold mt-14 mb-5">Opportunity</h3>
+    <p class="mb-6 leading-relaxed">Working with Jane, I translated her financial philosophy into a structured, self-contained system:</p>
+    <ul class="list-disc pl-6 space-y-2 mb-8 text-gray-300">
+      <li>Income &amp; Expense Logging with quick-action shortcuts</li>
+      <li>Savings Goals Tracker with visual progress bars and target dates</li>
+      <li>Automated Allocation Rules for paycheck distribution by percentage</li>
+      <li>Monthly &amp; Weekly Review dashboards (income, expenses, savings rate)</li>
+      <li>Net Worth &amp; Cash Flow comparison charts (MoM &amp; YoY)</li>
+      <li>FIRE Planner for early-retirement projections</li>
+      <li>Annual / Yearly Rollups for long-term financial tracking</li>
+    </ul>
+    <p class="mb-7 leading-relaxed">The Finance Tracker covers Jane's entire financial workflow inside a single Notion workspace: quick-action logging for income, expenses, and paycheck distribution; a savings goals tracker with visual progress bars; a monthly and weekly review system; automated allocation rules that split every paycheck across savings goals by percentage; comparison charts for net worth, income, and cash flow month-over-month and year-over-year; and a dedicated FIRE Planner that calculates progress toward early retirement based on net worth, spending, and return assumptions. Every section was designed to feel guided rather than overwhelming — clear headers, color-coded status tags, and a "what's coming up" view that always tells the user their next step.</p>
+
+    <h3 class="text-2xl font-semibold mt-14 mb-6">Impact</h3>
+    <p class="mb-7 leading-relaxed">The Finance Tracker gave Jane's audience a genuine alternative to scattered spreadsheets and generic budgeting apps — one built specifically around the FIRE mindset she teaches. Sold directly to her community of over a million followers, the template became a practical extension of her content: instead of just watching her strategy, her audience could now run their own numbers through the exact kind of system she uses to plan her own path to retiring before 30.</p>
+
+    <h3 class="text-2xl font-semibold mt-14 mb-6">Testimonial</h3>
+    <blockquote class="border-l-4 border-orange-500 pl-6 py-2 my-10 italic text-lg text-gray-300">
+      "I first discovered Yusuf through one of his Notion products, and I was genuinely blown away by the level of thought, detail, and usability behind it. It immediately stood out from anything else I had used, so when I needed a custom system tailored to my own brand and audience, he was the first person I reached out to. Yusuf didn't just deliver what I asked for — he built something that became incredibly valuable to my community. So many people reached out asking where they could get it or how they could work with him because of how useful and well-designed it was."
+      <footer class="mt-6 text-base not-italic text-gray-400">— Jane Tsang (rroomfies), Finance Influencer</footer>
+    </blockquote>
+
+    <h3 class="text-2xl font-semibold mt-14 mb-6">Core Skills</h3>
+    <div class="flex flex-wrap gap-3 mb-12">
+      <span class="px-4 py-2 bg-[#0D1B2A] border border-[#1E2D3D] rounded-lg text-sm">No-Code Solutions</span>
+      <span class="px-4 py-2 bg-[#0D1B2A] border border-[#1E2D3D] rounded-lg text-sm">Product Design</span>
+      <span class="px-4 py-2 bg-[#0D1B2A] border border-[#1E2D3D] rounded-lg text-sm">Financial Systems Design</span>
+      <span class="px-4 py-2 bg-[#0D1B2A] border border-[#1E2D3D] rounded-lg text-sm">Automation</span>
+      <span class="px-4 py-2 bg-[#0D1B2A] border border-[#1E2D3D] rounded-lg text-sm">Dashboard Design</span>
+      <span class="px-4 py-2 bg-[#0D1B2A] border border-[#1E2D3D] rounded-lg text-sm">Data Visualization</span>
+      <span class="px-4 py-2 bg-[#0D1B2A] border border-[#1E2D3D] rounded-lg text-sm">Notion</span>
+      <span class="px-4 py-2 bg-[#0D1B2A] border border-[#1E2D3D] rounded-lg text-sm">Digital Product Strategy</span>
     </div>
   `
 }

@@ -396,6 +396,15 @@ onBeforeUnmount(() => {
   }
 }
 
+/* Safari desktop: nudge game lower to match previous visual spacing */
+@supports (-webkit-touch-callout: none) {
+  @media (min-width: 1024px) {
+    .game {
+      transform: translateY(18px);
+    }
+  }
+}
+
 @media (min-width: 1920px) {
   #hello {
     padding-left: 310px;
@@ -403,5 +412,11 @@ onBeforeUnmount(() => {
   #hello .head h1 {
     font-size: 62px;
   }
+}
+
+:global(html.is-safari) #hello {
+  height: 100% !important;
+  min-height: 0 !important;
+  overflow: visible !important;
 }
 </style>

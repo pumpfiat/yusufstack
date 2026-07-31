@@ -29,6 +29,10 @@ main.page {
   overflow: hidden;
 }
 
+#route-shell {
+  display: contents;
+}
+
 #__nuxt {
   @apply bg-blue-background flex flex-col justify-between;
   border-radius: 7px;
@@ -36,6 +40,7 @@ main.page {
   height: 100%;
   width: 100%;
 }
+
 
 #section-content-title {
   width: 100%;
@@ -324,4 +329,73 @@ main.page {
 @font-face {
   font-family: "Fira Code Variable";
   src: url("./fonts/fira-code/FiraCode-Variable.ttf") format('truetype');
+}
+
+/* Safari hard fallback (scoped by runtime class so Chrome remains unchanged). */
+html.is-safari {
+  height: 100% !important;
+  min-height: 100vh !important;
+  min-height: 100dvh !important;
+  min-height: -webkit-fill-available !important;
+}
+
+html.is-safari body {
+  height: 100% !important;
+  min-height: 100vh !important;
+  min-height: 100dvh !important;
+  min-height: -webkit-fill-available !important;
+}
+
+html.is-safari #__nuxt {
+  height: 100% !important;
+  min-height: calc(100vh - 60px) !important;
+  min-height: calc(100dvh - 60px) !important;
+  min-height: calc(-webkit-fill-available - 60px) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+}
+
+html.is-safari #__nuxt > header,
+html.is-safari #__nuxt > footer {
+  flex: 0 0 auto !important;
+}
+
+html.is-safari #route-shell {
+  flex: 1 1 auto !important;
+  min-height: 0 !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  -webkit-overflow-scrolling: touch;
+  display: block !important;
+}
+
+html.is-safari main.page {
+  flex: 1 1 auto !important;
+  min-height: 0 !important;
+  height: auto !important;
+  overflow: visible !important;
+}
+
+html.is-safari #hello,
+html.is-safari #about-me,
+html.is-safari #projects,
+html.is-safari #contact-me {
+  min-height: 0 !important;
+  height: 100% !important;
+}
+
+@media (min-width: 1024px) {
+  html.is-safari #projects #filter-menu,
+  html.is-safari #projects #page-menu {
+    height: 100% !important;
+    flex: 0 0 auto !important;
+  }
+
+  html.is-safari #projects #projects-case {
+    height: 100% !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    -webkit-overflow-scrolling: touch;
+  }
 }

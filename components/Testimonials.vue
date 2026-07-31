@@ -59,6 +59,20 @@ const testimonials = [
     company: "Founder • Kaijego",
     avatar: "/images/testimonials/alma.png",
     text: "Working with Yusuf on 'Around the World with Alma Asinobi' was intuitive and seamless. The final design captured Kaijego beautifully."
+  },
+  {
+    username: "CTG-Method",
+    name: "Dr. Esther Makaripe",
+    company: "Founder • Certified Traders Group (CTG)",
+    avatar: "/images/testimonials/Esther.png",
+    text: "Working with Yusuf has been an incredible experience. He reached out to us out of the blue and, before ever joining the project, had already identified opportunities within our platform and presented thoughtful solutions that aligned with our vision.\n\nWhat impressed me most was how quickly he integrated with our team. Without a lengthy onboarding process, he was able to collaborate effectively with our developers, understand the product, and deliver meaningful work for our audience in just four weeks."
+  },
+  {
+    username: "rroomfies",
+    name: "Jane Tsang",
+    company: "Finance Influencer • rroomfies",
+    avatar: "/images/testimonials/Jane.png",
+    text: "I first discovered Yusuf through one of his Notion products, and I was genuinely blown away by the level of thought, detail, and usability behind it. It immediately stood out from anything else I had used, so when I needed a custom system tailored to my own brand and audience, he was the first person I reached out to.\n\nYusuf didn't just deliver what I asked for—he built something that became incredibly valuable to my community. So many people reached out asking where they could get it or how they could work with him because of how useful and well-designed it was."
   }
 ]
 </script>
@@ -127,13 +141,17 @@ const testimonials = [
 pre {
   margin: 0;
   white-space: pre-wrap;
-  font-family: 'Fira Code', monospace;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  font-family: 'Fira Code Retina', 'Fira Code', monospace;
   font-size: 0.85rem;
   line-height: 1.6;
   color: #C9D1D9;
+  -webkit-font-smoothing: antialiased;
 }
 
 code {
   color: #C9D1D9;
+  font-family: inherit;
 }
 </style>

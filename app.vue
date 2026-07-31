@@ -1,7 +1,9 @@
 <template>
   <MobileMenu/>
   <AppHeader/>
-  <NuxtPage data-aos="fade-in"/>
+  <div id="route-shell">
+    <NuxtPage data-aos="fade-in"/>
+  </div>
   <AppFooter/>
 </template>
 
@@ -9,6 +11,13 @@
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 export default {
+  methods: {
+    isSafariBrowser() {
+      if (!process.client) return false;
+      const ua = window.navigator.userAgent;
+      return /^((?!chrome|android|crios|fxios|edgios).)*safari/i.test(ua);
+    }
+  },
   /**
    * * Watch for route changes
    * This event is triggered when the route changes.
@@ -21,6 +30,12 @@ export default {
     }
   },
   mounted() {
+    if (this.isSafariBrowser()) {
+      document.documentElement.classList.add('is-safari');
+    } else {
+      document.documentElement.classList.remove('is-safari');
+    }
+
     AOS.init({
         // Global settings:
         disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
