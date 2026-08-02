@@ -28,15 +28,17 @@ export default defineNuxtConfig({
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { hid: 'description', name: 'description', content: 'A awesome developer portfolio design.' },
+        { hid: 'description', name: 'description', content: 'Yusuf Taiwo - web systems, Notion automation, and digital products for creators and finance educators.' },
         { hid: 'og:title', property: 'og:title', content: siteTitle },
-        { hid: 'og:description', property: 'og:description', content: 'A awesome developer portfolio design.' },
+        { hid: 'og:description', property: 'og:description', content: 'Yusuf Taiwo - web systems, Notion automation, and digital products for creators and finance educators.' },
         { hid: 'og:image', property: 'og:image', content: 'demo-share.jpg' },
-        { hid: 'og:url', property: 'og:url', content: 'https://developer-portfolio-v1.netlify.app/' },
+        { hid: 'og:url', property: 'og:url', content: 'https://yusufstack.com' },
         { name: 'theme-color', content: '#010C15' },
         // ...
       ],
       link: [
+        { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon8.png' },
+        { rel: 'shortcut icon', href: '/favicon8.png' },
         { rel: 'manifest', href: '/pwa/manifest.json' },
         { rel: 'apple-touch-icon', href: '/pwa/icons/apple-touch-icon.png' },
       ],

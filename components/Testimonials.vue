@@ -31,7 +31,10 @@
 </template>
 
 <script setup>
-const testimonials = [
+import { computed } from 'vue'
+import DevConfig from '~/developer.json'
+
+const defaultTestimonials = [
   {
     username: "snehauncover",
     name: "Sneha Mehta",
@@ -75,6 +78,13 @@ const testimonials = [
     text: "I first discovered Yusuf through one of his Notion products, and I was genuinely blown away by the level of thought, detail, and usability behind it. It immediately stood out from anything else I had used, so when I needed a custom system tailored to my own brand and audience, he was the first person I reached out to.\n\nYusuf didn't just deliver what I asked for—he built something that became incredibly valuable to my community. So many people reached out asking where they could get it or how they could work with him because of how useful and well-designed it was."
   }
 ]
+
+const testimonials = computed(() => {
+  const configuredItems = DevConfig?.testimonials?.items
+  return Array.isArray(configuredItems) && configuredItems.length > 0
+    ? configuredItems
+    : defaultTestimonials
+})
 </script>
 
 <style scoped>
