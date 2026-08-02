@@ -128,7 +128,7 @@
   "projects": {
     "1": {
       "title": "CTG Method",
-      "description": "A full ecosystem build for Certified Traders Group (CTG) — brand identity, merch design, an Academy platform redesign, and the launch of their Platinum membership tier.",
+      "description": "A full ecosystem build for Certified Traders Group, spanning brand, merch, Academy redesign, and Platinum launch.",
       "img": "/images/projects/CTG-Method.png",
       "tech": [
         "Web Dev"
@@ -137,7 +137,7 @@
     },
     "2": {
       "title": "Notion",
-      "description": "Official Notion Partner & Community Ambassador. Designed and delivered custom Notion workspaces, templates, and automation systems for 100+ businesses, startups, NGOs, creators, and teams across Africa and beyond.",
+      "description": "Official Notion Partner and Community Ambassador, delivering custom workspaces, templates, and automations for 100+ teams.",
       "img": "/images/projects/notion.png",
       "tech": [
         "Notion"
@@ -146,7 +146,7 @@
     },
     "3": {
       "title": "uncover",
-      "description": "Uncover needed launch-ready visuals that could stay consistent across new African markets while still feeling local and human. I designed campaign assets, retail print materials, and digital content systems to communicate product benefits with clarity. The rollout strengthened brand recognition and gave the team a repeatable creative framework for expansion.",
+      "description": "A skincare brand empowering dark-skinned women through inclusive visuals, strategic storytelling, and market-expansion design systems.",
       "img": "/images/projects/uncover.png",
       "tech": [
         "Adobe"
@@ -155,7 +155,7 @@
     },
     "4": {
       "title": "kaijego",
-      "description": "Kaijego needed storytelling assets that could inspire travelers with lower-ranked passports while staying practical and brand-aligned. I built a narrative-driven visual system, editorial layouts, and campaign design around Alma Asinobi's global journey. The project elevated audience engagement and positioned Kaijego as both aspirational and actionable.",
+      "description": "A story-driven travel brand helping lower-ranked passport holders explore confidently through editorial design and narrative UX.",
       "img": "/images/projects/kaijego.png",
       "tech": [
         "Adobe"
@@ -164,7 +164,7 @@
     },
     "5": {
       "title": "rroomfies Finance Tracker",
-      "description": "A fully custom Notion-based Finance Tracker built for Jane Tsang (rroomfies) — including budgeting tools, savings goals, and a FIRE (Financial Independence, Retire Early) planner. Sold directly to her 1M+ follower audience as a premium digital product.",
+      "description": "A custom Notion Finance Tracker for rroomfies, covering budgeting, savings goals, and FIRE planning for 1 million+ followers.",
       "img": "/images/projects/Finance_Tracker.png",
       "tech": [
         "Notion"
@@ -173,7 +173,7 @@
     },
     "6": {
       "title": "maxx-improve-ecommerce",
-      "description": "Maxx Improve needed a discreet, trustworthy storefront for a sensitive product category where clarity drives conversions. I designed and shipped a full Shopify experience, including UX structure, visual assets, and conversion-focused product communication. The result was a cleaner buying journey that improved customer trust and supported repeat sales.",
+      "description": "A conversion-focused Shopify experience for Maxx Improve, simplifying discovery, education, and purchasing for men's health products.",
       "img": "/images/projects/maxx-improve-store.png",
       "tech": [
         "Shopify"
@@ -182,7 +182,7 @@
     },
     "7": {
       "title": "sofit",
-      "description": "Sofit needed structured digital products to convert high-engagement fitness content into usable everyday programs. I created branded workout guides, recipe content systems, and coaching resources optimized for clarity and motivation. This helped the brand launch stronger info products and deepen trust with its community.",
+      "description": "A wellness and coaching system helping women build strength, confidence, and sustainable habits through guided programs.",
       "img": "/images/projects/sofit.png",
       "tech": [
         "Zapier"
@@ -191,7 +191,7 @@
     },
     "8": {
       "title": "pumpfiat",
-      "description": "PumpFiat needed disciplined execution to move from early concept to a live, reliable B2B outreach platform. I led cross-functional delivery across product, design, and engineering to ship core workflows and align stakeholders around milestones. The launch created a stable operational base and supported measurable commercial growth.",
+      "description": "A permission-based outreach platform with verified datasets and campaign tools for compliant, high-deliverability growth.",
       "img": "/images/projects/pumpfiat.png",
       "tech": [
         "Web Dev"
@@ -200,7 +200,7 @@
     },
     "9": {
       "title": "maxx-improve-guides",
-      "description": "Maxx Improve needed educational content that reduced confusion and helped customers use products safely and consistently. I designed a complete set of digital and print instructional guides with clear flows, dosage guidance, and visual explainers. The materials reduced support friction and improved the perceived quality of the product experience.",
+      "description": "Instructional product guides helping customers use men's health products correctly, safely, and confidently across channels.",
       "img": "/images/projects/maxx-improve-guides.png",
       "tech": [
         "Adobe"
@@ -209,7 +209,7 @@
     },
     "10": {
       "title": "chess-notion",
-      "description": "Chess players and coaches needed a single operating system instead of scattered notes, apps, and spreadsheets. I built modular Notion templates for study planning, game analysis, repertoire tracking, and performance reviews. The system made improvement loops more consistent and easier to sustain over time.",
+      "description": "A Notion template system for chess players and coaches to analyze games and track performance.",
       "img": "/images/projects/chess-notion.png",
       "tech": [
         "Notion"
@@ -218,7 +218,7 @@
     },
     "11": {
       "title": "osof-notion",
-      "description": "Creators needed premium, ready-to-use business systems without spending weeks building from scratch. I designed and packaged Notion templates, companion resources, and a cohesive digital product storefront for Osof Notion. The result was a scalable product ecosystem that supported both self-serve customers and custom client work.",
+      "description": "A premium collection of Notion systems helping creators streamline productivity, operations, goals, and business workflows.",
       "img": "/images/projects/osof-notion.png",
       "tech": [
         "Notion"
@@ -227,7 +227,7 @@
     },
     "12": {
       "title": "compass-pdf",
-      "description": "Travelers needed concise, actionable planning resources that cut through scattered online advice. I developed structured Compass PDF guides with curated routes, checklists, and destination-specific planning flows. The guides improved trip-prep clarity and made travel decisions faster for the target audience.",
+      "description": "Digital travel guides helping travelers plan smarter trips with curated insights, routes, and practical resources.",
       "img": "/images/projects/compass-pdf.png",
       "tech": [
         "Gumroad"
