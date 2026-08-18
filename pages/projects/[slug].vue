@@ -156,8 +156,17 @@ class="
   <div v-html="projectBottom"></div>
 </template>
 
-<template v-if="slug === 'compasspdf'">
-  <div v-html="projectContent"></div>
+<template v-if="slug === 'x-fashion-store'">
+  <div v-html="projectTop"></div>
+
+  <ProjectCarousel
+    project-name="Fashion"
+    :total-slides="11"
+    extension="png"
+    title="X Fashion Store Collection"
+  />
+
+  <div v-html="projectBottom"></div>
 </template>
 
 
@@ -189,6 +198,7 @@ class="
 import DevConfig from '~/developer.json'
 import KaijegoCarousel from '~/components/KaijegoCarousel.vue'
 import CTGCarousel from '~/components/CTGCarousel.vue'
+import ProjectCarousel from '~/components/projectCarousel.vue'
 
 
 const route = useRoute()
@@ -1186,167 +1196,175 @@ else if (slug === 'maxx-improve-ecommerce') {
 else if (slug === 'pumpfiat') {
   projectContent.value = `
     <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-10 text-orange-400">
-      From zero to launch — structured execution that made it happen.
+      Recovery isn't just legal — it's operational.
     </h2>
 
     <div class="grid md:grid-cols-2 gap-10 mb-14 text-gray-300">
       <div>
         <h3 class="text-xl font-semibold mb-4 text-white">Key Facts</h3>
         <ul class="space-y-2">
-          <li><strong>Role:</strong> Project Manager & Coordinator</li>
-          <li><strong>Period:</strong> 2023 – 2024</li>
-          <li><strong>Platform:</strong> Vue.js frontend + backend integration</li>
-          <li><strong>Impact:</strong> Took the project from bootstrap to live launch</li>
-          <li><strong>Website:</strong> <a href="https://pumpfiat.com" target="_blank" class="text-orange-400 hover:underline">pumpfiat.com</a></li>
-          <li><strong>Revenue:</strong> Averages ~$30,000/month</li>
-          <li><strong>Headquarters:</strong> Kansas City, MO</li>
+          <li><strong>Period:</strong> 2026–Present</li>
+          <li><strong>Position:</strong> Full-Stack Product Designer & Builder</li>
+          <li><strong>Client:</strong> Ramos James Law, PLLC</li>
+          <li><strong>Impact:</strong> 122 case records managed, $50.4M recovered tracked in-system, 104 active cases running through the platform</li>
+          <li><strong>Solution:</strong> Public intake site + internal case operations platform</li>
         </ul>
       </div>
       <div>
         <p class="italic text-gray-400">
-          Led cross-functional coordination, delivery, and launch of a permission-based outreach platform that provides verified prospect datasets and campaign tools for compliant, high-deliverability growth.
+          A complete digital system for Ramos James Law — from the client-facing intake experience through to Case Operations, the internal platform staff use to manage every case, document, dollar, and deadline.
         </p>
       </div>
     </div>
 
     <h3 class="text-2xl font-semibold mt-14 mb-5">Company</h3>
     <p class="mb-7 leading-relaxed">
-      PumpFiat is a B2B SaaS company offering a permission-based outreach platform that helps businesses access verified prospect datasets and execute high-deliverability email campaigns. The product combines clean data sourcing, compliance-first tools, and campaign management features to enable scalable, ethical outbound growth. Headquartered in Kansas City, Missouri, PumpFiat serves clients across South Africa, Singapore, Germany, and beyond.
+      Ramos James Law, PLLC is a personal injury law firm based in Austin, Texas, representing injured Texans in car accident, truck accident, workplace injury, wrongful death, and other personal injury cases. Operating on a no-fee-unless-they-win model and available 24/7, the firm's whole value proposition rests on being fast, responsive, and easy to reach at the exact moment someone needs help most.
     </p>
 
     <h3 class="text-2xl font-semibold mt-14 mb-5">Challenge</h3>
     <p class="mb-7 leading-relaxed">
-      The project started in bootstrap mode — early concept, scattered tasks, no clear delivery structure, and multiple moving parts across product, design, development, and operations. The biggest risk was losing momentum or shipping something that didn't meet the high standard required for a compliance-sensitive product in a competitive space.
-    </p>
-    <p class="mb-7 leading-relaxed">
-      The goal was to bring structure, clarity, and speed — turning vision into a functional, live product without compromising quality, timelines, or team alignment.
-    </p>
-
-    <h3 class="text-2xl font-semibold mt-14 mb-6">Role & Contribution</h3>
-    <p class="mb-7 leading-relaxed">
-      I served as Project Manager and Coordinator, bringing my full experience in cross-functional delivery to the table. I owned the end-to-end process from bootstrap to launch:
-    </p>
-    <ul class="list-disc pl-6 space-y-3 mb-8 text-gray-300">
-      <li>Created the project structure, timelines, milestones, and tracking system</li>
-      <li>Coordinated between product, design, development, and stakeholders</li>
-      <li>Ensured alignment on priorities, scope, and deliverables</li>
-      <li>Managed risks, blockers, and dependencies in real time</li>
-      <li>Led sprint planning, daily standups, and progress reviews</li>
-      <li>Played a critical role in decision-making and keeping momentum high</li>
-      <li>Delivered the platform live — on time and to quality standard</li>
-    </ul>
-    <p class="mb-7 leading-relaxed">
-      The experience working with experts from South Africa, Singapore, Germany, and the US was incredibly rewarding — it reinforced how structured execution and global collaboration can turn a strong idea into a high-performing B2B SaaS product averaging ~$30,000/month.
-    </p>
-
-    <!-- Hero image + caption -->
-    <div class="mt-16 mb-20">
-      <img 
-        src="/images/projects/pumpfiat/hero-main.png"
-        alt="PumpFiat platform overview"
-        class="w-full rounded-2xl shadow-2xl object-cover"
-      />
-      <p class="text-center text-gray-400 italic mt-6 text-lg">
-        From early bootstrap to a live B2B SaaS platform averaging $30,000/month — a permission-based outreach tool serving clients across South Africa, Singapore, Germany, and beyond. Built with Vue.js, delivered through structured coordination, and scaled with global expertise from Kansas City HQ.
-      </p>
-    </div>
-
-    <h3 class="text-2xl font-semibold mt-16 mb-5">Impact</h3>
-    <p class="mb-7 leading-relaxed">
-      The project launched successfully and is now live at <a href="https://pumpfiat.com" target="_blank" class="text-orange-400 hover:underline">pumpfiat.com</a>. My structured approach and coordination were critical in turning an early-stage idea into a functional, user-facing product — delivered on time, within scope, and with high quality.
-    </p>
-    <p class="mb-7 leading-relaxed">
-      The platform now provides real value to users, averaging ~$30,000/month in revenue, and the experience reinforced my belief in the power of clear execution when building in bootstrap mode with international teams.
-    </p>
-
-    <h3 class="text-2xl font-semibold mt-14 mb-6">Core Skills</h3>
-    <div class="flex flex-wrap gap-3 mb-12">
-      <span class="px-4 py-2 bg-[#0D1B2A] border border-[#1E2D3D] rounded-lg text-sm">Project Management</span>
-      <span class="px-4 py-2 bg-[#0D1B2A] border border-[#1E2D3D] rounded-lg text-sm">Cross-Functional Coordination</span>
-      <span class="px-4 py-2 bg-[#0D1B2A] border border-[#1E2D3D] rounded-lg text-sm">Bootstrap Delivery</span>
-      <span class="px-4 py-2 bg-[#0D1B2A] border border-[#1E2D3D] rounded-lg text-sm">Stakeholder Alignment</span>
-      <span class="px-4 py-2 bg-[#0D1B2A] border border-[#1E2D3D] rounded-lg text-sm">Risk & Dependency Management</span>
-      <span class="px-4 py-2 bg-[#0D1B2A] border border-[#1E2D3D] rounded-lg text-sm">Launch Execution</span>
-      <span class="px-4 py-2 bg-[#0D1B2A] border border-[#1E2D3D] rounded-lg text-sm">Vue.js Ecosystem</span>
-      <span class="px-4 py-2 bg-[#0D1B2A] border border-[#1E2D3D] rounded-lg text-sm">Global Team Collaboration</span>
-    </div>
-  `
-}
-else if (slug === 'compasspdf') {
-  projectContent.value = `
-    <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-10 text-orange-400">
-      Your world — unlocked, one country at a time.
-    </h2>
-
-    <div class="grid md:grid-cols-2 gap-10 mb-14 text-gray-300">
-      <div>
-        <h3 class="text-xl font-semibold mb-4 text-white">Key Facts</h3>
-        <ul class="space-y-2">
-          <li><strong>Role:</strong> Creative Director, Designer & Full Product Creator</li>
-          <li><strong>Platform:</strong> Gumroad</li>
-          <li><strong>Period:</strong> 2024 – Present</li>
-          <li><strong>Impact:</strong> Premium country-specific travel PDFs sold globally</li>
-          <li><strong>Products:</strong> Detailed guides for visas, culture, costs, safety & more</li>
-        </ul>
-      </div>
-      <div>
-        <p class="italic text-gray-400">
-          A collection of beautifully designed, comprehensive country travel PDFs that help people plan confident, informed, and unforgettable trips — from visa rules to wild experiences.
-        </p>
-      </div>
-    </div>
-
-    <h3 class="text-2xl font-semibold mt-14 mb-5">Company</h3>
-    <p class="mb-7 leading-relaxed">
-      Compass PDF is a Gumroad-powered digital product line offering premium, country-specific travel guides. Each PDF is a complete planning companion — covering visa requirements, entry rules, costs, best seasons, festivals, safety tips, local customs, accommodation hacks, currency exchange, digital nomad/student visa info, and unforgettable experiences. Designed for travelers who want clarity, confidence, and inspiration before they book a single flight.
-    </p>
-
-    <h3 class="text-2xl font-semibold mt-14 mb-5">Challenge</h3>
-    <p class="mb-7 leading-relaxed">
-      Travelers often face scattered, outdated, or overwhelming information when planning trips — especially to countries with complex visa rules, cultural nuances, or hidden costs. Free online sources are fragmented, while generic guidebooks feel impersonal and outdated quickly.
-    </p>
-    <p class="mb-7 leading-relaxed">
-      The opportunity was to create a premium, beautifully designed, always-up-to-date digital product that feels like having a personal travel expert: clear, visual, actionable, and emotionally inspiring — sold directly on Gumroad for instant access.
+      A firm built around speed and accessibility can't run on scattered spreadsheets and inboxes. Ramos James Law needed a public intake experience that could capture an injured, often stressed potential client's information in minutes — and, just as critically, an internal system to manage what happened after: dozens of open cases, a growing team, thousands of dollars in case costs, and settlement values that needed to be tracked accurately from "new lead" all the way to "money in the client's hands."
     </p>
 
     <h3 class="text-2xl font-semibold mt-14 mb-6">Details</h3>
-    <p class="mb-8 leading-relaxed">
-      I built the entire Compass PDF experience from scratch: designed every country guide (layout, visuals, tables, maps, icons), wrote empathetic and practical copy, created consistent branding across PDFs, thumbnails, covers, and Gumroad product pages, and structured each guide to answer every major planning question in one beautiful download.
+    <p class="mb-7 leading-relaxed">
+      I designed and built the full system end-to-end, branded as "Case Operations" under the Ramos James Law shield.
     </p>
+    <ul class="list-disc pl-6 space-y-3 mb-8 text-gray-300">
+      <li>On the public side, the intake page gives visitors multiple paths to reach the firm — a direct call line, a guided "start my free consultation" flow, or a callback request form — backed by trust signals and a bilingual English/Spanish experience.</li>
+      <li>Behind that sits the internal platform: a Firm Dashboard, Cases & Leads database, Calendar, Documents system, Billing & Case Value module, and Team & Workload view.</li>
+      <li>The platform gives leadership a live snapshot of active cases, lead conversion, recoveries, upcoming events, and staff workload across the entire firm.</li>
+    </ul>
 
-    <!-- Hero image + caption -->
     <div class="mt-16 mb-20">
-      <img 
-        src="/images/projects/compasspdf/hero-main.png"
-        alt="Compass PDF country travel guides"
+      <img
+        src="/images/projects/Ramos%20James%20Law/Law_Firm_Hero.png"
+        alt="Ramos James Law intake and case operations system"
         class="w-full rounded-2xl shadow-2xl object-cover"
       />
       <p class="text-center text-gray-400 italic mt-6 text-lg">
-        A premium collection of country-specific travel PDFs — each one thoughtfully designed with clear layouts, vibrant visuals, practical tables, cultural insights, and inspiring highlights. From visa rules and costs to festivals, safety, and wild experiences — everything travelers need in one elegant, downloadable guide.
+        A legal-tech system built to turn a high-volume intake process into a clear operational pipeline — while giving the firm one source of truth for cases, documents, dollars, and deadlines.
       </p>
     </div>
 
-    <h3 class="text-2xl font-semibold mt-16 mb-5">Opportunity</h3>
+    <h3 class="text-2xl font-semibold mt-14 mb-5">Opportunity</h3>
     <p class="mb-7 leading-relaxed">
-      This project allowed me to create a scalable digital product ecosystem: high-value PDFs that solve real pain points for travelers while building a premium brand on Gumroad. I handled full-cycle creation — research, copywriting, design, visual identity, product mockups, Gumroad storefront setup, pricing strategy, and launch assets.
+      Working with Ramos James Law, I built a system covering the full client and case lifecycle:
     </p>
+    <ol class="list-decimal pl-6 space-y-3 mb-8 text-gray-300">
+      <li>A high-converting public intake page with multiple contact paths and trust-building social proof</li>
+      <li>A centralized case pipeline tracking every lead from first contact through settlement or loss</li>
+      <li>Firm-controlled, access-logged document storage tied directly to each case</li>
+      <li>A shared calendar for consultations, court dates, depositions, and mediations across the whole team</li>
+      <li>Built-in billing and contingency-fee tracking, from case-opened through settled-and-closed</li>
+      <li>A team workload view giving leadership real-time visibility into staff capacity and performance</li>
+    </ol>
 
     <h3 class="text-2xl font-semibold mt-14 mb-5">Impact</h3>
     <p class="mb-7 leading-relaxed">
-      The Compass PDF series quickly became a go-to resource for travelers planning trips to complex or culturally rich destinations. Each guide delivers instant value, builds trust through clarity and beauty, and drives repeat purchases as people return for new countries. The brand positioning as "your personal travel expert in one download" has helped establish authority and loyalty in the digital travel product space.
+      The system gave Ramos James Law a single source of truth for the entire case lifecycle. What used to live across someone's inbox, a spreadsheet, and a filing cabinet now runs through one platform: 122 case records tracked end-to-end, $50.4M in client recoveries logged and broken down by contingency fee and case cost, and a live pipeline the whole team can see and act on — turning a firm that moves fast for clients into one that also moves fast internally.
     </p>
+
+    <h3 class="text-2xl font-semibold mt-14 mb-6">Testimonial</h3>
+    <blockquote class="border-l-4 border-orange-500 pl-6 py-2 my-10 italic text-lg text-gray-300">
+      "Yusuf gave us something we didn't have before; one place to see every case, every dollar, and every deadline. What used to take digging through inboxes and spreadsheets now takes seconds. It's changed how our whole team works."
+      <footer class="mt-6 text-base not-italic text-gray-400">
+        — Ramos James Law, PLLC
+      </footer>
+    </blockquote>
 
     <h3 class="text-2xl font-semibold mt-14 mb-6">Core Skills</h3>
     <div class="flex flex-wrap gap-3 mb-12">
       <span class="px-4 py-2 bg-[#0D1B2A] border border-[#1E2D3D] rounded-lg text-sm">Product Design</span>
-      <span class="px-4 py-2 bg-[#0D1B2A] border border-[#1E2D3D] rounded-lg text-sm">Gumroad Store</span>
-      <span class="px-4 py-2 bg-[#0D1B2A] border border-[#1E2D3D] rounded-lg text-sm">PDF Layout</span>
-      <span class="px-4 py-2 bg-[#0D1B2A] border border-[#1E2D3D] rounded-lg text-sm">Travel Content</span>
-      <span class="px-4 py-2 bg-[#0D1B2A] border border-[#1E2D3D] rounded-lg text-sm">Branding</span>
-      <span class="px-4 py-2 bg-[#0D1B2A] border border-[#1E2D3D] rounded-lg text-sm">Visual Storytelling</span>
-      <span class="px-4 py-2 bg-[#0D1B2A] border border-[#1E2D3D] rounded-lg text-sm">E-Commerce</span>
+      <span class="px-4 py-2 bg-[#0D1B2A] border border-[#1E2D3D] rounded-lg text-sm">Full-Stack Development</span>
+      <span class="px-4 py-2 bg-[#0D1B2A] border border-[#1E2D3D] rounded-lg text-sm">UI/UX Design</span>
+      <span class="px-4 py-2 bg-[#0D1B2A] border border-[#1E2D3D] rounded-lg text-sm">Case Management Systems</span>
+      <span class="px-4 py-2 bg-[#0D1B2A] border border-[#1E2D3D] rounded-lg text-sm">Document Systems with Access Logging</span>
+      <span class="px-4 py-2 bg-[#0D1B2A] border border-[#1E2D3D] rounded-lg text-sm">Billing & Contingency-Fee Tracking</span>
+      <span class="px-4 py-2 bg-[#0D1B2A] border border-[#1E2D3D] rounded-lg text-sm">Dashboard & Reporting</span>
+      <span class="px-4 py-2 bg-[#0D1B2A] border border-[#1E2D3D] rounded-lg text-sm">Conversion Design</span>
+      <span class="px-4 py-2 bg-[#0D1B2A] border border-[#1E2D3D] rounded-lg text-sm">Legal Tech</span>
+    </div>
+  `
+}
+else if (slug === 'x-fashion-store') {
+  projectTop.value = `
+    <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-10 text-orange-400">
+      Sometimes the loudest design decision is silence.
+    </h2>
+
+    <div class="grid md:grid-cols-2 gap-10 mb-14 text-gray-300">
+      <div>
+        <h3 class="text-xl font-semibold mb-4 text-white">Key Facts</h3>
+        <ul class="space-y-2">
+          <li><strong>Period:</strong> 2025–2026</li>
+          <li><strong>Position:</strong> E-Commerce &amp; Product Designer</li>
+          <li><strong>Brand:</strong> X Fashion Store <span class="text-gray-500">(client name withheld)</span></li>
+          <li><strong>Impact:</strong> Full e-commerce platform build, monochrome product catalog spanning 40+ SKUs across men's and women's lines</li>
+        </ul>
+      </div>
+      <div>
+        <p class="italic text-gray-400">
+          A minimalist, monochrome fashion e-commerce platform built for an anonymous fashion brand — where restraint, not decoration, does all the design work.
+        </p>
+      </div>
+    </div>
+
+    <h3 class="text-2xl font-semibold mt-14 mb-5">Company</h3>
+    <p class="mb-7 leading-relaxed">
+      X Fashion Store is a fashion label operating in the minimalist, monochrome space — all-black and charcoal collections spanning apparel, footwear, and accessories. Due to the confidential nature of this engagement, the brand's identity is withheld, but the work speaks for itself: a product-first approach where the clothing is the entire story, with no marketing noise competing for attention.
+    </p>
+
+    <h3 class="text-2xl font-semibold mt-14 mb-5">Challenge</h3>
+    <p class="mb-7 leading-relaxed">
+      Most fashion e-commerce sites lean on lifestyle photography, promotional banners, and heavy branding to sell product. This client wanted the opposite: a site so stripped-back that the product itself became the only thing worth looking at. The challenge was designing an experience with almost nothing on the page — no product names, no prices on the grid, no marketing copy — while still feeling premium, intentional, and easy to shop.
+    </p>
+
+    <h3 class="text-2xl font-semibold mt-14 mb-6">Details</h3>
+    <p class="mb-7 leading-relaxed">
+      Over the course of a year, I designed and built the full e-commerce experience: a clean, code-labeled product grid (each item identified only by a short alphanumeric code like "TS-04" or "BD-03"), a simple MENS/WOMENS toggle, and a stripped product detail flow that carried the same restraint as the grid. Every category — tees, outerwear, denim, footwear, bags, accessories — was photographed and presented the same way: flat, front-facing, floating on white, with zero visual noise. The entire interface was built around a single principle: if a design element didn't need to be there, it was removed.
+    </p>
+
+    <div class="mt-16 mb-20">
+      <img
+        src="/images/projects/Fashion/Fashion_Hero.png"
+        alt="X Fashion Store storefront hero"
+        class="w-full rounded-2xl shadow-2xl object-cover"
+      />
+      <p class="text-center text-gray-400 italic mt-6 text-lg">
+        The visual language was intentionally quiet: monochrome, minimal, and product-led. Every decision was filtered through one question — does this help the product breathe, or does it add unnecessary noise?
+      </p>
+    </div>
+  `
+
+  projectBottom.value = `
+    <h3 class="text-2xl font-semibold mt-16 mb-5">Opportunity</h3>
+    <p class="mb-7 leading-relaxed">
+      Working with X Fashion Store, I designed and built a full e-commerce platform around radical simplicity:
+    </p>
+    <ol class="list-decimal pl-6 space-y-3 mb-8 text-gray-300">
+      <li>A code-based, uncluttered product grid replacing traditional product names and pricing at the browse stage</li>
+      <li>A consistent, studio-flat photography treatment applied across every product category</li>
+      <li>A minimal MENS/WOMENS navigation system with no visual hierarchy beyond what the products demanded</li>
+      <li>A stripped-down cart and product detail experience that matched the restraint of the main grid</li>
+    </ol>
+
+    <h3 class="text-2xl font-semibold mt-14 mb-5">Impact</h3>
+    <p class="mb-7 leading-relaxed">
+      The result was an e-commerce experience that felt distinct in a crowded fashion space — one that trusted the product enough to let it stand alone. The site became a proof point that "premium" doesn't require ornamentation; a fully monochrome, code-labeled catalog across 40+ products proved that restraint itself can be the brand's loudest statement.
+    </p>
+
+    <h3 class="text-2xl font-semibold mt-14 mb-6">Core Skills</h3>
+    <div class="flex flex-wrap gap-3 mb-12">
+      <span class="px-4 py-2 bg-[#0D1B2A] border border-[#1E2D3D] rounded-lg text-sm">E-Commerce Design</span>
+      <span class="px-4 py-2 bg-[#0D1B2A] border border-[#1E2D3D] rounded-lg text-sm">Art Direction</span>
+      <span class="px-4 py-2 bg-[#0D1B2A] border border-[#1E2D3D] rounded-lg text-sm">Minimalist UI/UX</span>
+      <span class="px-4 py-2 bg-[#0D1B2A] border border-[#1E2D3D] rounded-lg text-sm">Product Photography Direction</span>
+      <span class="px-4 py-2 bg-[#0D1B2A] border border-[#1E2D3D] rounded-lg text-sm">Front-End Development</span>
+      <span class="px-4 py-2 bg-[#0D1B2A] border border-[#1E2D3D] rounded-lg text-sm">Visual Systems Design</span>
       <span class="px-4 py-2 bg-[#0D1B2A] border border-[#1E2D3D] rounded-lg text-sm">Adobe Suites</span>
-      <span class="px-4 py-2 bg-[#0D1B2A] border border-[#1E2D3D] rounded-lg text-sm">Canva</span>
+      <span class="px-4 py-2 bg-[#0D1B2A] border border-[#1E2D3D] rounded-lg text-sm">Figma</span>
     </div>
   `
 }

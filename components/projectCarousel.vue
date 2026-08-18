@@ -68,7 +68,11 @@ function updateSlidesPerView() {
 }
 
 function getImageSrc(n) {
-  return `/images/projects/${props.projectName}/a4-${n}.${props.extension}`
+  const fileName = props.projectName === 'Fashion'
+    ? `${n}.${props.extension}`
+    : `a4-${n}.${props.extension}`
+
+  return `/images/projects/${props.projectName}/${fileName}`
 }
 
 function next() {

@@ -172,13 +172,13 @@
       "url": "/projects/rroomfies"
     },
     "6": {
-      "title": "maxx-improve-ecommerce",
-      "description": "A conversion-focused Shopify experience for Maxx Improve, simplifying discovery, education, and purchasing for men's health products.",
-      "img": "/images/projects/maxx-improve-store.png",
+      "title": "X Fashion Store",
+      "description": "A minimalist monochrome e-commerce experience built around restraint, product-first storytelling, and a premium, noise-free shopping flow.",
+      "img": "/images/projects/Fashion.png",
       "tech": [
-        "Shopify"
+        "Web Dev"
       ],
-      "url": "/projects/maxx-improve-ecommerce"
+      "url": "/projects/x-fashion-store"
     },
     "7": {
       "title": "sofit",
@@ -190,15 +190,24 @@
       "url": "/projects/sofit"
     },
     "8": {
-      "title": "pumpfiat",
-      "description": "A permission-based outreach platform with verified datasets and campaign tools for compliant, high-deliverability growth.",
-      "img": "/images/projects/pumpfiat.png",
+      "title": "Ramos James Law",
+      "description": "A complete digital system for a personal injury firm — from public intake to internal case operations and settlement tracking.",
+      "img": "/images/projects/Ramos_James.png",
       "tech": [
         "Web Dev"
       ],
       "url": "/projects/pumpfiat"
     },
     "9": {
+      "title": "maxx-improve-ecommerce",
+      "description": "A conversion-focused Shopify experience for Maxx Improve, simplifying discovery, education, and purchasing for men's health products.",
+      "img": "/images/projects/maxx-improve-store.png",
+      "tech": [
+        "Shopify"
+      ],
+      "url": "/projects/maxx-improve-ecommerce"
+    },
+    "10": {
       "title": "maxx-improve-guides",
       "description": "Instructional product guides helping customers use men's health products correctly, safely, and confidently across channels.",
       "img": "/images/projects/maxx-improve-guides.png",
@@ -207,7 +216,7 @@
       ],
       "url": "/projects/maxx-improve-guides"
     },
-    "10": {
+    "11": {
       "title": "chess-notion",
       "description": "A Notion template system for chess players and coaches to analyze games and track performance.",
       "img": "/images/projects/chess-notion.png",
@@ -216,7 +225,7 @@
       ],
       "url": "/projects/chess-notion"
     },
-    "11": {
+    "12": {
       "title": "osof-notion",
       "description": "A premium collection of Notion systems helping creators streamline productivity, operations, goals, and business workflows.",
       "img": "/images/projects/osof-notion.png",
@@ -224,15 +233,6 @@
         "Notion"
       ],
       "url": "/projects/osofnotion"
-    },
-    "12": {
-      "title": "compass-pdf",
-      "description": "Digital travel guides helping travelers plan smarter trips with curated insights, routes, and practical resources.",
-      "img": "/images/projects/compass-pdf.png",
-      "tech": [
-        "Gumroad"
-      ],
-      "url": "/projects/compasspdf"
     }
   }
 }
