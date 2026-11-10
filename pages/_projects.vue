@@ -78,6 +78,21 @@
 import { ref, nextTick } from 'vue'
 import DevConfig from '~/developer.json';
 
+const title = 'Projects & Case Studies | Yusuf Taiwo'
+const description = 'Explore Yusuf Taiwo’s portfolio of web systems, e-commerce experiences, Notion workspaces, and digital product case studies.'
+
+useSeoMeta({
+  title,
+  description,
+  ogTitle: title,
+  ogDescription: description,
+  ogUrl: 'https://yusufstack.com/projects',
+})
+
+useHead({
+  link: [{ rel: 'canonical', href: 'https://yusufstack.com/projects' }],
+})
+
 const config = ref(DevConfig)
 
 const techs = ['Notion', 'Zapier', 'Web Dev', 'Shopify', 'Gumroad', 'Adobe']

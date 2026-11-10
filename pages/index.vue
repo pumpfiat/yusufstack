@@ -56,6 +56,36 @@
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 import DevConfig from '~/developer.json'
 
+const homeTitle = 'Yusuf Taiwo | Web Systems Builder'
+const homeDescription = 'Yusuf Taiwo builds scalable websites, custom Notion workspaces, and automation systems for creators, finance educators, and growing businesses.'
+
+useSeoMeta({
+  title: homeTitle,
+  description: homeDescription,
+  ogTitle: homeTitle,
+  ogDescription: homeDescription,
+  ogUrl: 'https://yusufstack.com/',
+})
+
+useHead({
+  link: [{ rel: 'canonical', href: 'https://yusufstack.com/' }],
+  script: [{
+    type: 'application/ld+json',
+    innerHTML: JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Person',
+      name: 'Yusuf Taiwo',
+      url: 'https://yusufstack.com/',
+      jobTitle: 'Web Systems Builder',
+      description: homeDescription,
+      sameAs: [
+        'https://github.com/pumpfiat',
+        'https://www.linkedin.com/in/yusuf-taiwo-grit/',
+      ],
+    }),
+  }],
+})
+
 const config = ref(DevConfig)
 
 const isMobile = ref(false)

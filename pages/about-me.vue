@@ -292,6 +292,21 @@ export default {
    * In setup we can define the data we want to use in the component before the component is created.
    */
   setup() {
+    const title = 'About Yusuf Taiwo | Web Systems Builder'
+    const description = 'Learn about Yusuf Taiwo, a web systems builder and Notion Partner creating scalable websites, practical digital systems, and workflow automations for growing teams.'
+
+    useSeoMeta({
+      title,
+      description,
+      ogTitle: title,
+      ogDescription: description,
+      ogUrl: 'https://yusufstack.com/about-me',
+    })
+
+    useHead({
+      link: [{ rel: 'canonical', href: 'https://yusufstack.com/about-me' }],
+    })
+
     return {
       config: DevConfig
     }

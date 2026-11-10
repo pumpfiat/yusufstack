@@ -15,8 +15,6 @@ export default defineNuxtConfig({
    * head config: https://nuxt.com/docs/api/configuration/nuxt-config#head
    * meta config: https://nuxt.com/docs/getting-started/seo-meta
    * pageTransition config: https://nuxt.com/docs/getting-started/transitions#transitions
-   * TODO: Add more meta tags for SEO
-   * TODO: Add tags for social media sharing
    * TODO: Migrate apple-touch-icon config to manifest.json
    */
   app: {
@@ -28,13 +26,14 @@ export default defineNuxtConfig({
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { hid: 'description', name: 'description', content: 'Yusuf Taiwo - web systems, Notion automation, and digital products for creators and finance educators.' },
-        { hid: 'og:title', property: 'og:title', content: siteTitle },
-        { hid: 'og:description', property: 'og:description', content: 'Yusuf Taiwo - web systems, Notion automation, and digital products for creators and finance educators.' },
-        { hid: 'og:image', property: 'og:image', content: 'demo-share.jpg' },
-        { hid: 'og:url', property: 'og:url', content: 'https://yusufstack.com' },
+        { name: 'description', content: 'Yusuf Taiwo builds scalable websites, custom Notion workspaces, and automation systems for creators, finance educators, and growing businesses.' },
+        { property: 'og:site_name', content: 'Yusuf Taiwo | YusufStack' },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:locale', content: 'en_US' },
+        { property: 'og:image', content: 'https://yusufstack.com/demo-share.jpg' },
+        { property: 'og:image:alt', content: 'Yusuf Taiwo — Web Systems Builder' },
+        { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'theme-color', content: '#010C15' },
-        // ...
       ],
       link: [
         { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon8.png' },

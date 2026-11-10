@@ -106,6 +106,21 @@ export default {
         }
     },
     setup() {
+        const title = 'Contact Yusuf Taiwo | Web Systems Builder'
+        const description = 'Get in touch with Yusuf Taiwo about web systems, custom Notion workspaces, automation, and digital product projects.'
+
+        useSeoMeta({
+            title,
+            description,
+            ogTitle: title,
+            ogDescription: description,
+            ogUrl: 'https://yusufstack.com/contact-me',
+        })
+
+        useHead({
+            link: [{ rel: 'canonical', href: 'https://yusufstack.com/contact-me' }],
+        })
+
         return {
             contact: DevConfig.contacts,
         }

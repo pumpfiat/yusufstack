@@ -209,6 +209,23 @@ const project = Object.values(DevConfig.projects || {}).find(p => {
   return urlSlug === slug
 })
 
+const projectTitle = `${project?.title || 'Project'} Case Study | Yusuf Taiwo`
+const projectDescription = project?.description
+  || 'Explore a web systems and digital product case study by Yusuf Taiwo.'
+const canonicalUrl = `https://yusufstack.com/projects/${slug}`
+
+useSeoMeta({
+  title: projectTitle,
+  description: projectDescription,
+  ogTitle: projectTitle,
+  ogDescription: projectDescription,
+  ogUrl: canonicalUrl,
+})
+
+useHead({
+  link: [{ rel: 'canonical', href: canonicalUrl }],
+})
+
 const projectContent = ref('')
 const projectTop = ref('')
 const projectBottom = ref('')
